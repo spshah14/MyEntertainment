@@ -10,22 +10,27 @@ import {
 import About from './components/About';
 import Home from './components/Home';
 import Movies from './components/Movies';
-import Moviesmore from './components/Moviesmore';
+// import Moviesmore from './components/Moviesmore';
+import Tvshow from './components/Tvshow';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/moviesmore" element={<Moviesmore />} />
+    <>
+      <div className="App">
 
-        </Routes>
-      </Router>
-    </div>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/movies" element={<Movies />} />
+            {/* <Route path="/moviesmore" element={<Moviesmore />} /> */}
+            <Route path="/tvshows" element={<Tvshow />} />
+
+          </Routes>
+        </Router>
+      </div>
+    </>
   );
 }
 
