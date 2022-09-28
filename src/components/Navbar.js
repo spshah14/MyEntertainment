@@ -80,6 +80,15 @@ const Navbar = () => {
                                 <MDBNavbarLink href='/movies'>Movies</MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
+                                <MDBNavbarLink href='/popular'>Popular Movies</MDBNavbarLink>
+                            </MDBNavbarItem>
+                            <MDBNavbarItem>
+                                <MDBNavbarLink href='/topmovies'>Top Movies</MDBNavbarLink>
+                            </MDBNavbarItem>
+                            <MDBNavbarItem>
+                                <MDBNavbarLink href='/upcomingmovies'>Upcoming Movies</MDBNavbarLink>
+                            </MDBNavbarItem>
+                            <MDBNavbarItem>
                                 <MDBNavbarLink href='/tvshows'>TV Shows</MDBNavbarLink>
                             </MDBNavbarItem>
 

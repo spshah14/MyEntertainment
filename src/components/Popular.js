@@ -32,9 +32,7 @@ import {
     MDBContainer
 } from 'mdb-react-ui-kit';
 
-
-const Movies = () => {
-
+const Popular = () => {
     const [optSmModal, setOptSmModal] = useState(false);
 
     const toggleShow = () => setOptSmModal(!optSmModal);
@@ -52,7 +50,7 @@ const Movies = () => {
     let parsedresults = [];
     const fetchData = async () => {
 
-        const url = "https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images"
+        const url = "https://api.themoviedb.org/3/movie/popular?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images"
 
         let results = await fetch(url)
         parsedresults = await results.json()
@@ -299,88 +297,6 @@ const Movies = () => {
 
     )
 
-
-
-
-
-    // {/* <div className="container my-4">
-
-    // <div className="row">
-    //     {data.map((element) => {
-    //         return <div key={element.id}>
-
-    //             <MDBCard style={{ maxHeight: '440px' }}>
-    //                 <MDBRow className='g-0'>
-    //                     <MDBCol md='4'>
-    //                         {/* <MDBCardImage src={`${image_path}${element.backdrop_path}`} fluid style={{ maxHeight: '440px', minWidth: "440px" }} /> */}
-    //                         <MDBCardImage src={`${image_path}${element.poster_path}`} fluid style={{ maxHeight: '440px', minWidth: "440px" }} />
-
-    //                     </MDBCol>
-    //                     <MDBCol md='8'>
-    //                         <MDBCardBody>
-    //                             <MDBCardTitle>{element.title}</MDBCardTitle>
-    //                             <MDBCardText>
-    //                                 {element.overview}
-    //                             </MDBCardText>
-    //                             <MDBCardText>
-    //                                 <small className='text-muted'>Release date: {element.release_date}</small>
-    //                             </MDBCardText>
-    //                             <Link to="/moviesmore">Go somewhere</Link>
-    //                         </MDBCardBody>
-    //                     </MDBCol>
-    //                 </MDBRow>
-    //             </MDBCard>
-    //             <br />
-    //         </div>
-    //     })}
-    // </div>
-    // </div> */}
-
-
-
-
-
-
-
-
-
-
-    // let { title, imgUrl, newsurl, overview, release_date } = props;
-    // const image_path = "https://image.tmdb.org/t/p/original";
-    // return (
-    //     <MDBRow>
-    //         <MDBCol sm='6'>
-    //             <MDBCard>
-    //                 <MDBCardImage position='top' src={`${image_path}${imgUrl}`} alt='...' />
-    //                 <MDBCardBody>
-    //                     <MDBCardTitle>{title}</MDBCardTitle>
-    //                     <MDBCardText>
-    //                         {overview}
-    //                     </MDBCardText>
-    //                     <MDBCardText>
-    //                         Release date: {release_date}
-    //                     </MDBCardText>
-    //                     <MDBBtn href={newsurl}>Go somewhere</MDBBtn>
-    //                 </MDBCardBody>
-    //             </MDBCard>
-    //         </MDBCol>
-    //         <MDBCol sm='6'>
-    //             <MDBCard>
-    //                 <MDBCardImage position='top' src={`${image_path}${imgUrl}`} alt='...' />
-    //                 <MDBCardBody>
-    //                     <MDBCardTitle>{title}</MDBCardTitle>
-    //                     <MDBCardText>
-    //                         {overview}
-    //                     </MDBCardText>
-    //                     <MDBCardText>
-    //                         Release date: {release_date}
-    //                     </MDBCardText>
-    //                     <MDBBtn href={newsurl}>Go somewhere</MDBBtn>
-    //                 </MDBCardBody>
-    //             </MDBCard>
-    //         </MDBCol>
-    //     </MDBRow>
-    // )
 }
 
-export default Movies
+export default Popular
