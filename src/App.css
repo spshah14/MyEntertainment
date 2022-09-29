@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,25 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.horizontal{
+  
+    /* background-color: lightblue; */
+    /* border: 1px solid black; */
+    /* height: 100px;
+    width: 500px; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    /* scroll-behavior: hidden; */
+    scroll-behavior: smooth;
+  
+    }
+    
+.slide1 {
+    /* width: 1000px; */
+    margin: 10px;
+    display: inline-block;
+   
 }
