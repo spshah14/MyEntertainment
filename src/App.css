@@ -47,7 +47,7 @@
     overflow-y: hidden;
     white-space: nowrap;
     /* scroll-behavior: hidden; */
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
   
     }
     
@@ -56,4 +56,33 @@
     margin: 10px;
     display: inline-block;
    
+}
+.s4{
+   height: 250px
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.position{
+  position: relative;
+}
+/* div.relative {
+  position: relative;
+  bottom: 10px;
+  border: 3px solid #73AD21;
+} */
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+.bottomleft2 {
+  position: absolute;
+  bottom: 40px;
+  left: 16px;
+  font-size: 18px;
 }
