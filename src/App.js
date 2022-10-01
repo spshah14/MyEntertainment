@@ -14,7 +14,7 @@ import Popular from './components/Popular';
 // import Moviesmore from './components/Moviesmore';
 import Tvshow from './components/Tvshow';
 import Topmovies from './components/Topmovies';
-import Upcomingmovie from './Upcomingmovie';
+import Upcomingmovie from './components/Upcomingmovie';
 
 function App() {
   return (

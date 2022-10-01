@@ -13,11 +13,11 @@ import {
     MDBCardImage,
     MDBCardBody,
     MDBCardTitle,
-    MDBCardText,
+    // MDBCardText,
     MDBCardFooter,
     MDBRow,
     MDBCol,
-    MDBRipple,
+    // MDBRipple,
     MDBIcon
 } from 'mdb-react-ui-kit';
 // import { Link } from 'react-router-dom';
@@ -30,10 +30,13 @@ import {
     MDBModalTitle,
     MDBModalBody,
     MDBModalFooter,
-    // MDBContainer
+    // MDBContainer,
+    MDBCarousel,
+    MDBCarouselItem,
 } from 'mdb-react-ui-kit';
 import Spinner from './Spinner';
 import InfiniteScroll from 'react-infinite-scroller';
+import profile from '../Avtar.jpg';
 
 
 const Movies = () => {
@@ -54,16 +57,25 @@ const Movies = () => {
     const [title, setTitle] = useState('')
     const [backdrop_path, setbackdrop_path] = useState(null)
     const [poster_path, setPoster_path] = useState(null)
+    const [poster_path1, setPoster_path1] = useState(null)
+    const [poster_path2, setPoster_path2] = useState(null)
+    const [poster_path3, setPoster_path3] = useState(null)
+    const [poster_path4, setPoster_path4] = useState(null)
+    const [poster_path5, setPoster_path5] = useState(null)
     const [overview, setOverview] = useState('')
     const [geners, setGeners] = useState([])
     const [production, setProduction] = useState([])
     const [tagline, setTagline] = useState('')
+    const [rating, setRating] = useState('')
     const [release_date, setRelease_date] = useState('')
     const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
+    const [id, setId] = useState(1)
 
 
-
+    setTimeout(() => {
+        setId(id + 1);
+    }, 3000);
 
     let parsedresults = [];
     const fetchData = async () => {
@@ -76,12 +88,43 @@ const Movies = () => {
         setData(parsedresults.results)
         setTotalPages(parsedresults.total_pages)
         setPage(parsedresults.page)
+        // setPoster_path1(parsedresults.results[0].backdrop_path)
+        // setPoster_path2(parsedresults.results[1].backdrop_path)
+        // setPoster_path3(parsedresults.results[2].backdrop_path)
+        // setPoster_path4(parsedresults.results[3].backdrop_path)
+        // setPoster_path5(parsedresults.results[4].backdrop_path)
+        console.log(poster_path1)
+        console.log(poster_path2)
+        console.log(poster_path3)
         setLoading(false)
+
+
     }
+
+
+    const fetchupcoming = async () => {
+
+        const url = "https://api.themoviedb.org/3/movie/upcoming?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&page=1&with_origin_country=IN&include_video=true&append_to_response=videos,images"
+
+        let results = await fetch(url)
+        parsedresults = await results.json()
+        // setData(parsedresults.results)
+        setPoster_path1(parsedresults.results[0].poster_path)
+        setPoster_path2(parsedresults.results[1].poster_path)
+        setPoster_path3(parsedresults.results[2].poster_path)
+        setPoster_path4(parsedresults.results[3].poster_path)
+        setPoster_path5(parsedresults.results[4].poster_path)
+        // console.log(parsedresults)
+
+
+    }
+
+
 
     useEffect(() => {
 
         fetchData()
+        fetchupcoming()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -106,7 +149,8 @@ const Movies = () => {
         let parsedresults2 = await results.json()
         setData2(parsedresults2.results)
         setLoading2(false)
-        // console.log(parsedresults2)
+        console.log(parsedresults2)
+        console.log(data2);
         // eslint-disable-next-lin
 
 
@@ -140,6 +184,7 @@ const Movies = () => {
         setProduction(parsedresults5.production_companies)
         setTagline(parsedresults5.tagline)
         setRelease_date(parsedresults5.release_date)
+        setRating(parsedresults5.vote_average)
         // console.log(parsedresults5)
         // console.log(geners)
 
@@ -183,64 +228,93 @@ const Movies = () => {
                 loader={<Spinner />}
             >
 
-                <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
-                    {data.map((element) => {
-                        return <MDBCol key={element.id}>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade my-3" data-bs-ride="carousel">
+                    <>
 
-                            <MDBCard className='h-100 mb-3' alignment="start" background='light' shadow="1"  >
-                                <MDBRipple
-                                    className='bg-image hover-overlay shadow-1-strong rounded'
-                                    rippleTag='div'
-                                    rippleColor='light'
-                                >
+                        <div class="carousel-inner2">
+                            {(poster_path1) && <div class="carousel-item active c1" >
+                                <img src={`${image_path}${poster_path1}`} class="d-block w-100 rounded-1 border border-dark" alt="..." />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+
+                                </div>
+                            </div>}
+                            {(poster_path2) && <div class="carousel-item c1">
+                                <img src={`${image_path}${poster_path2}`} class="d-block w-100 rounded-1 border border-dark" alt="..." />
+                            </div>}
+                            {(poster_path3) && <div class="carousel-item c1">
+                                <img src={`${image_path}${poster_path3}`} class="d-block w-100 rounded-1 border border-dark" alt="..." />
+                            </div>}
+                            {(poster_path4) && <div class="carousel-item c1">
+                                <img src={`${image_path}${poster_path4}`} class="d-block w-100 rounded-1 border border-dark" alt="..." />
+                            </div>}
+                            {(poster_path5) && <div class="carousel-item c1">
+                                <img src={`${image_path}${poster_path5}`} class="d-block w-100 rounded-1 border border-dark" alt="..." />
+                            </div>}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </>
+
+                </div>
+
+
+                <MDBRow className='row-cols-1 row-cols-md-6 g-4'>
+                    {data.map((element) => {
+                        return <MDBCol key={element.id} onClick={toggleShow}>
+                            <MDBCard className='h-100' onClick={() => fetchItems(element.id)}>
+                                <div className='bg-image hover-overlay rounded mx-auto d-block' >
                                     <MDBCardImage
                                         src={`${image_path}${element.poster_path}`}
-                                        // src={`${image_path}${element.backdrop_path}`}
                                         alt='...'
                                         position='top'
-                                        className='img-fluid shadow-4 '
-                                        style={{ maxHeight: '400px' }}
-
+                                        // style={{ maxHeight: '250px', maxWidth: '250px' }}
+                                        className='rounded mx-auto d-block '
                                     />
                                     <a href='#!'>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}></div>
+                                        <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
                                     </a>
-                                </MDBRipple>
-                                <MDBCardBody className='position'>
+                                </div>
+
+                                <MDBCardBody>
                                     <MDBCardTitle className='text-center'>{element.title}</MDBCardTitle>
-                                    <MDBCardText>
-                                        <div style={{ marginBottom: "50px" }}>
-                                            {element.overview}
-                                        </div>
-                                    </MDBCardText>
-                                    <MDBCardText>
-                                        <div className='bottomleft2'>
-                                            {(element.vote_average !== 0)
-                                                ? <i className="fa-solid fa-star">{element.vote_average}</i>
-                                                : <i className="fa-solid fa-star">Not rated yet</i>}
-                                        </div>
-                                    </MDBCardText>
-                                    <MDBCardText>
-                                        <div className='text-muted bottomleft' >Release date: {element.release_date}</div>
-                                    </MDBCardText>
 
                                 </MDBCardBody>
-                                <MDBCardFooter>
-
-                                    <MDBBtn onClick={toggleShow} >
-                                        <MDBBtn onClick={() => fetchItems(element.id)}>
-                                            LAUNCH DEMO MODAL
-                                        </MDBBtn>
+                                <MDBCardFooter className='text-center'>
+                                    <MDBBtn outline rounded className='text-center' onClick={toggleShow} >
+                                        Watch
                                     </MDBBtn>
-
                                 </MDBCardFooter>
-
-
                             </MDBCard>
                         </MDBCol>
-
                     })}
                 </MDBRow>
+
+
+
+
+                {/* <div class="row">
+                    {data.map((element) => {
+                        return <div class="col-sm-2" key={element.id} style={{ maxHeight: '250px', maxWidth: '200px' }}>
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src={`${image_path}${element.poster_path}`} class="img-fluid" alt="..." style={{ maxHeight: '200px', maxWidth: '200px' }} />
+                                    <h5 class="card-title">{element.title}</h5>
+
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    })}
+                </div> */}
+
 
             </InfiniteScroll>
 
@@ -262,19 +336,22 @@ const Movies = () => {
                                         ? <img src={`${image_path}${backdrop_path}`} className="card-img-top rounded mx-auto d-block my-2" alt='' style={{ maxHeight: '700px', maxWidth: '700px' }} />
                                         : <img src={`${image_path}${poster_path}`} className="card-img-top rounded mx-auto d-block my-2" alt='' style={{ maxHeight: '500px', maxWidth: '500px' }} />}
                                     <div className="card-body">
-                                        {(`${title}` !== '') && <h5 className="card-title text-center">{`${title}`}</h5>}
-                                        {(`${tagline}` !== '') && <><b>Tagline:</b><span className="card-text">{` ${tagline}`}</span></>}
+                                        {(`${title}` !== '') && <h5 className="card-title text-center my-1">{`${title}`}</h5>}
+                                        {(`${tagline}` !== '') && <><b>Tagline:</b><span className="card-text mx-1 my-1">{` ${tagline}`}</span></>}
                                         <br />
-                                        {(`${overview}` !== '') && <><b>Overview:</b><span className="card-text">{`${overview}`}</span></>}
+                                        {(`${overview}` !== '') && <><b>Overview:</b><span className="card-text mx-1 my-1">{`${overview}`}</span></>}
                                         <br />
-                                        {(`${release_date}` !== '') && <><b>Release Date:</b><span className="card-text">{`${release_date}`}</span></>}
+                                        {(`${release_date}` !== '') && <><b>Release Date:</b><span className="card-text mx-1 my-1">{`${release_date}`}</span></>}
+                                        <br />
+                                        {(`${rating}` !== '') && <><b>Rating:</b><span className="card-text mx-1 my-1">{` ${rating} `}<i class="fa-solid fa-star"></i></span></>}
                                         <br />
                                         <b>Genres:</b>
                                         {geners.map((element) => {
-                                            return <span className="card-text">{` ${element.name} `}</span>
+                                            return <span className="card-text generborder mx-1 my-1">{` ${element.name} `}</span>
+
                                         })}
                                         <br />
-                                        <b>Production House:</b>
+                                        <div className='my-1'><b>Production House:</b></div>
                                         <div className="horizontal">
                                             {production.map((element) => {
                                                 return <div key={element.id} className="slide1">
@@ -289,23 +366,32 @@ const Movies = () => {
                                         </div>
                                         <br />
 
-                                        <b>Videos:</b>
-                                        <div className="horizontal">
-                                            {data2.map((element) => {
-                                                return <div key={element.key} className="slide1">
-                                                    {
-                                                        (element.results !== [])
-                                                            ? <><iframe
+                                        {
+                                            (`${data2}` !== []) &&
+                                            <>
+                                                <b>Videos:</b>
+                                                <div className="horizontal">
+                                                    {data2.map((element) => {
+
+                                                        return <div key={element.key} className="slide1">
+
+
+                                                            <><iframe
                                                                 src={`${video_url}${element.key}`}
                                                                 title="YouTube video"
                                                                 allowFullScreen
                                                                 style={{ maxHeight: '300px', maxWidth: '300px' }}
-                                                            ></iframe></>
-                                                            : <><p>Not Available</p></>
-                                                    }
+                                                            ></iframe>
+                                                                <div className='text-center'><b>{element.type}</b></div>
+                                                            </>
+
+
+                                                        </div>
+
+                                                    })}
                                                 </div>
-                                            })}
-                                        </div>
+                                            </>
+                                        }
 
 
                                         <br />
@@ -313,12 +399,21 @@ const Movies = () => {
                                         <div className="horizontal">
                                             {data3.map((element) => {
                                                 return <div key={element.id} className="card slide1 text-center" style={{ width: '15rem' }}>
-                                                    <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
-                                                        <img src={`${image_path}${element.profile_path}`} className="card-img-top my-1" alt={`${element.name}`} style={{ maxHeight: '150px', maxWidth: '150px', minHeight: '150px' }} />
-                                                    </a>
+
+                                                    {
+                                                        (element.profile_path !== null)
+                                                            ?
+                                                            <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
+                                                                <img src={`${image_path}${element.profile_path}`} className="card-img-top my-2 text-center" alt={`${element.name}`} style={{ maxHeight: '170px', maxWidth: 'auto' }} /></a>
+                                                            : <img src={profile} alt="" className="card-img-top my-2 text-center" style={{ maxHeight: 'auto', maxWidth: '170px', minHeight: '170px' }} />
+                                                        // : <MDBIcon far icon="file-video" size='2x' />
+                                                    }
+                                                    {/* <img src={`${image_path}${element.profile_path}`} className="card-img-top my-1 text-center" alt={`${element.name}`} style={{ maxHeight: 'auto', maxWidth: '170px' }} />
+                                                        <i class="fa-solid fa-user"></i> */}
+
                                                     <div className="card-body">
-                                                        <div className="card-text">Name<br /> {element.name}</div>
-                                                        <div className="card-text">Character<br /> {element.character}</div>
+                                                        <div className="card-text"> <b>{element.name}</b></div>
+                                                        <div className="card-text text-wrap">Character<br /> {element.character}</div>
                                                     </div>
                                                 </div>
                                             })}
@@ -334,10 +429,7 @@ const Movies = () => {
                                                         <a href={`${image_path}${element.file_path}`} target='-blank' rel="noopener noreferrer">
                                                             <img src={`${image_path}${element.file_path}`} alt='...' className='img-fluid' style={{ maxHeight: '300px', maxWidth: '300px' }} />
                                                         </a>
-                                                        {/* <a href='#!'>
-                                                            <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
-                                                        </a> */}
-                                                        {/* <img src={`${image_path}${element.file_path}`} alt='...' style={{ maxHeight: '200px', maxWidth: '200px' }} /> */}
+
                                                     </div>
 
                                                 </div>
