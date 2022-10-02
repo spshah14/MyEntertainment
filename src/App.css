@@ -168,14 +168,60 @@ div.desc {
   object-fit: fill;
   /* margin: auto; */ 
 }
+
 .carousel-inner2 {
   position: relative;
-  width: 70%;
+  width: 70rem;
   overflow: hidden;
   display: flex;
-  justify-content: start;
+  /* justify-content: start; */
   align-content: center;
   margin: 15px auto;
   border: 1px solid white;
   border-radius: 15px
+}
+/* .c5{
+  width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+} */
+
+.c3 image{
+  max-height: 300px;
+  max-width: auto;
+}
+
+body{
+  background-color: black;
+}
+.bcolor{
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid white !important;
+  border-radius: 10px;
+}
+.bodycolor{
+  background-color: black;
+  color: white !important;
+}
+/* .stick{
+  position :absolute;
+} */
+
+.horizontal .card{
+  background-color: transparent !important;
+}
+
+.inputbackground{
+  display: block;
+  width: 100%;
+    /* margin: 10px auto; */
+    padding: 5px 10px;
+    background: transparent;
+    color: #1266f1 !important;
+    /* border: 0.5px solid #7f7a7a; */
+    border: 0.125rem solid #1266f1 !important;
+    border-radius: 5px;
 }

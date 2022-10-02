@@ -18,10 +18,13 @@ import {
     // MDBDropdownItem,
     MDBCollapse,
 } from 'mdb-react-ui-kit';
+import { useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
     const [showBasic, setShowBasic] = useState(false);
+    let location = useLocation();
+
     return (
         <>
             {/* <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -69,33 +72,33 @@ const Navbar = () => {
                     <MDBCollapse navbar show={showBasic}>
                         <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
                             <MDBNavbarItem>
-                                <MDBNavbarLink active aria-current='page' href='/'>
+                                <MDBNavbarLink aria-current='page' href='/' className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>
                                     Home
                                 </MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
-                                <MDBNavbarLink href='/about'>About</MDBNavbarLink>
+                                <MDBNavbarLink href='/about' className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}>About</MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
-                                <MDBNavbarLink href='/movies'>Movies</MDBNavbarLink>
+                                <MDBNavbarLink href='/movies' className={`nav-link ${location.pathname === "/movies" ? "active" : ""}`}>Movies</MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
-                                <MDBNavbarLink href='/popular'>Popular Movies</MDBNavbarLink>
+                                <MDBNavbarLink href='/popular' className={`nav-link ${location.pathname === "/popular" ? "active" : ""}`}>Popular Movies</MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
-                                <MDBNavbarLink href='/topmovies'>Top Movies</MDBNavbarLink>
+                                <MDBNavbarLink href='/topmovies' className={`nav-link ${location.pathname === "/topmovies" ? "active" : ""}`}>Top Movies</MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
-                                <MDBNavbarLink href='/upcomingmovies'>Upcoming Movies</MDBNavbarLink>
+                                <MDBNavbarLink href='/upcomingmovies' className={`nav-link ${location.pathname === "/upcomingmovies" ? "active" : ""}`}>Upcoming Movies</MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
-                                <MDBNavbarLink href='/tvshows'>TV Shows</MDBNavbarLink>
+                                <MDBNavbarLink href='/tvshows' className={`nav-link ${location.pathname === "/tvshows" ? "active" : ""}`}>TV Shows</MDBNavbarLink>
                             </MDBNavbarItem>
 
                         </MDBNavbarNav>
 
                         <form className='d-flex input-group w-auto'>
-                            <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
+                            <input type='search' className='form-control' id="searchTxt" placeholder='Type query' aria-label='Search' />
                             <MDBBtn color='primary'>Search</MDBBtn>
                         </form>
                     </MDBCollapse>

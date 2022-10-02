@@ -1,0 +1,373 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/aFGPUmbgGoAt93WP3WYsAPa0Yv8.jpg",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "id": 20453,
+            "original_language": "hi",
+            "original_title": "3 Idiots",
+            "overview": "",
+            "popularity": 46.165,
+            "poster_path": "/gmSRHU1Wtiatj8KoyVt8rT9ockx.jpg",
+            "release_date": "2009-12-23",
+            "title": "3 ईडियट",
+            "video": false,
+            "vote_average": 8,
+            "vote_count": 1904
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/16UEQo8TSAJoAMNdoEJm7lJIABf.jpg",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "id": 452,
+            "original_language": "da",
+            "original_title": "Idioterne",
+            "overview": "",
+            "popularity": 15.331,
+            "poster_path": "/d7Jeih0UvhmkUyRvpmv5BwD08yB.jpg",
+            "release_date": "1998-04-28",
+            "title": "Idioterne",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 420
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/pBSA5vMQEXCwkNfOYBcMVfDbCkR.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 530047,
+            "original_language": "de",
+            "original_title": "Idioten der Familie",
+            "overview": "",
+            "popularity": 1.871,
+            "poster_path": "/aw2VsBD89F8n379RzhpD2rJUdUY.jpg",
+            "release_date": "2018-07-01",
+            "title": "Idioten der Familie",
+            "video": false,
+            "vote_average": 5.8,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ocRku7QqOa6qUrbrkbfqWYSGRjl.jpg",
+            "genre_ids": [
+                16,
+                35,
+                14,
+                18
+            ],
+            "id": 42521,
+            "original_language": "en",
+            "original_title": "Idiots and Angels",
+            "overview": "",
+            "popularity": 3.501,
+            "poster_path": "/z1cKsKMfjl5n1TNcfnk2rQ20wM0.jpg",
+            "release_date": "2008-04-26",
+            "title": "Idiots and Angels",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 55
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                35,
+                27
+            ],
+            "id": 312793,
+            "original_language": "en",
+            "original_title": "The Walking Deceased",
+            "overview": "",
+            "popularity": 13.77,
+            "poster_path": "/i7X1Z7Oo4pJghgDmDoL1rIhyGJd.jpg",
+            "release_date": "2015-03-20",
+            "title": "The Walking Deceased",
+            "video": false,
+            "vote_average": 5.5,
+            "vote_count": 159
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/f6xYGn12Tr6UnDgJ6APb0wVEgPF.jpg",
+            "genre_ids": [
+                14,
+                18
+            ],
+            "id": 5728,
+            "original_language": "de",
+            "original_title": "Tag der Idioten",
+            "overview": "",
+            "popularity": 0.917,
+            "poster_path": "/m1SEZgFZQckhYHbxqLGpUN1WJra.jpg",
+            "release_date": "1981-10-31",
+            "title": "Tag der Idioten",
+            "video": false,
+            "vote_average": 5.9,
+            "vote_count": 9
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 966125,
+            "original_language": "en",
+            "original_title": "山炮进城",
+            "overview": "",
+            "popularity": 1.346,
+            "poster_path": "/dWTwbuyhAYRWLc1x3H1IjXL4876.jpg",
+            "release_date": "2015-10-27",
+            "title": "山炮进城",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 186371,
+            "original_language": "de",
+            "original_title": "Die Schlacht der Idioten",
+            "overview": "",
+            "popularity": 0.6,
+            "poster_path": null,
+            "release_date": "1986-01-01",
+            "title": "Die Schlacht der Idioten",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                35
+            ],
+            "id": 26490,
+            "original_language": "en",
+            "original_title": "Andy Parsons: Britain's Got Idiots",
+            "overview": "",
+            "popularity": 1.46,
+            "poster_path": "/hCtIJNwecC9RBgLsj7lUj7XJYx1.jpg",
+            "release_date": "2009-11-23",
+            "title": "Andy Parsons: Britain's Got Idiots",
+            "video": false,
+            "vote_average": 6,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8qwHzo2CgQHFmrOBW1FnUEXX4Eb.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 203534,
+            "original_language": "en",
+            "original_title": "Dealin' with Idiots",
+            "overview": "",
+            "popularity": 3.456,
+            "poster_path": "/2yV3GRdoKDDIaFgHzf6ZOIpBdtB.jpg",
+            "release_date": "2013-07-12",
+            "title": "Dealin' with Idiots",
+            "video": false,
+            "vote_average": 5.4,
+            "vote_count": 29
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/5hmTzU0jT9w3J9BAaHUlqpKpKHU.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 747988,
+            "original_language": "ja",
+            "original_title": "君は永遠にそいつらより若い",
+            "overview": "",
+            "popularity": 5.319,
+            "poster_path": "/fjCH5bWetpEkLJPTtc8Tbo2wAzY.jpg",
+            "release_date": "2021-09-17",
+            "title": "君は永遠にそいつらより若い",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 4
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/x78cvxbmpBNcHON7x3Iv8vih5Sj.jpg",
+            "genre_ids": [
+                16,
+                35,
+                10751
+            ],
+            "id": 774741,
+            "original_language": "en",
+            "original_title": "Diary of a Wimpy Kid",
+            "overview": "",
+            "popularity": 100.278,
+            "poster_path": "/obg6lWuNaZkoSlwrVG4VVk4SmT.jpg",
+            "release_date": "2021-12-03",
+            "title": "Diary of a Wimpy Kid",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 275
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/r55WG16pI5DD6OKwoEpD1rP3Da5.jpg",
+            "genre_ids": [
+                99
+            ],
+            "id": 752908,
+            "original_language": "da",
+            "original_title": "Idioterne der startede Festen",
+            "overview": "",
+            "popularity": 0.94,
+            "poster_path": "/gtocPktreUjKgLDBiPRjTgLRSfD.jpg",
+            "release_date": "2020-10-13",
+            "title": "Idioterne der startede Festen",
+            "video": false,
+            "vote_average": 6,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/h5oFNRkkLAsBcSGHThR1pHld1CF.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 763571,
+            "original_language": "zh",
+            "original_title": "山炮进城2",
+            "overview": "",
+            "popularity": 0.957,
+            "poster_path": "/ceIKOWx3nKI14yytH5lmi8JdHls.jpg",
+            "release_date": "2016-03-02",
+            "title": "山炮进城2",
+            "video": false,
+            "vote_average": 3,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hYp95kO8acj6VmSRIpSNOSAhbpu.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 484599,
+            "original_language": "zh",
+            "original_title": "傻瓜向錢衝",
+            "overview": "",
+            "popularity": 0.6,
+            "poster_path": "/jsfgo0aZTthVnCiiVQNksy1iS75.jpg",
+            "release_date": "2016-05-06",
+            "title": "傻瓜向錢衝",
+            "video": false,
+            "vote_average": 2,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                35
+            ],
+            "id": 395198,
+            "original_language": "ml",
+            "original_title": "ഇഡിയറ്റ്സ്",
+            "overview": "",
+            "popularity": 0.772,
+            "poster_path": "/lAkPcpX1rEQdcJY7xPvXAkddPbZ.jpg",
+            "release_date": "2012-11-23",
+            "title": "ഇഡിയറ്റ്സ്",
+            "video": false,
+            "vote_average": 3.3,
+            "vote_count": 3
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                35
+            ],
+            "id": 20221,
+            "original_language": "es",
+            "original_title": "El rey de los huevones",
+            "overview": "",
+            "popularity": 1.4,
+            "poster_path": "/uXi94u08fyKQTQvgJWsZ3MrcUf6.jpg",
+            "release_date": "2006-08-31",
+            "title": "El rey de los huevones",
+            "video": false,
+            "vote_average": 4.6,
+            "vote_count": 6
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                10749,
+                18
+            ],
+            "id": 437988,
+            "original_language": "ja",
+            "original_title": "ばかもの",
+            "overview": "",
+            "popularity": 0.873,
+            "poster_path": "/6j6pFHnHLT47yslELmAEYkrH2mA.jpg",
+            "release_date": "2010-12-18",
+            "title": "ばかもの",
+            "video": false,
+            "vote_average": 10,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6kG3tlqlGIP3W8LIipWaIPOL5VD.jpg",
+            "genre_ids": [
+                16
+            ],
+            "id": 288676,
+            "original_language": "en",
+            "original_title": "iDiots",
+            "overview": "",
+            "popularity": 0.6,
+            "poster_path": "/wImyMmcuoaKIQD9r9aapBcFk3lk.jpg",
+            "release_date": "2013-01-01",
+            "title": "iDiots",
+            "video": false,
+            "vote_average": 5.9,
+            "vote_count": 4
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                35
+            ],
+            "id": 102053,
+            "original_language": "en",
+            "original_title": "Them Idiots: Whirled Tour",
+            "overview": "",
+            "popularity": 2.657,
+            "poster_path": "/aWaYSXtYacLSsQ7Dkanl6i0x41N.jpg",
+            "release_date": "2012-03-12",
+            "title": "Them Idiots: Whirled Tour",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 10
+        }
+    ],
+    "total_pages": 3,
+    "total_results": 60
+}
