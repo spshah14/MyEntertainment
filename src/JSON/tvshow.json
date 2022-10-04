@@ -1,0 +1,399 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "backdrop_path": "/mqnyFBK7RMZaGhD6gVHspoUYK6I.jpg",
+            "first_air_date": "2021-02-08",
+            "genre_ids": [
+                35,
+                18,
+                10751
+            ],
+            "id": 119316,
+            "name": "वागले की दुनिया",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "वागले की दुनिया",
+            "overview": "",
+            "popularity": 235.031,
+            "poster_path": "/jKonm6Q3vw51Ytd4y7bJ70xJT7l.jpg",
+            "vote_average": 5.8,
+            "vote_count": 4
+        },
+        {
+            "backdrop_path": "/rRjxJJvr0xrcDzRUhLufMNDvq1F.jpg",
+            "first_air_date": "2017-07-16",
+            "genre_ids": [
+                10764,
+                10764
+            ],
+            "id": 73085,
+            "name": "బిగ్ బాస్",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "te",
+            "original_name": "బిగ్ బాస్",
+            "overview": "",
+            "popularity": 166.461,
+            "poster_path": "/eTdAtEVzFLVLkwTBf3dCxp5E4hl.jpg",
+            "vote_average": 6.5,
+            "vote_count": 8
+        },
+        {
+            "backdrop_path": "/hLi5umdYp8VyoQqPE9QXCUsW0Ps.jpg",
+            "first_air_date": "2000-07-03",
+            "genre_ids": [
+                10764
+            ],
+            "id": 911,
+            "name": "कौन बनेगा करोड़पति",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "कौन बनेगा करोड़पति",
+            "overview": "",
+            "popularity": 154.427,
+            "poster_path": "/8srHjzgZq9V9sgsTkIwGARDyADj.jpg",
+            "vote_average": 7.3,
+            "vote_count": 20
+        },
+        {
+            "backdrop_path": "/oOl2v17GpwEpALP8KMyImErJcH6.jpg",
+            "first_air_date": "2016-04-23",
+            "genre_ids": [
+                35,
+                10767
+            ],
+            "id": 66465,
+            "name": "The Kapil Sharma Show",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "The Kapil Sharma Show",
+            "overview": "",
+            "popularity": 102.012,
+            "poster_path": "/bUlgDjaxYkBrbOxjJef2qkFBAjb.jpg",
+            "vote_average": 7.3,
+            "vote_count": 24
+        },
+        {
+            "backdrop_path": null,
+            "first_air_date": "2017-09-25",
+            "genre_ids": [
+                18
+            ],
+            "id": 75232,
+            "name": "मेरे साईं",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "मेरे साईं",
+            "overview": "",
+            "popularity": 84.766,
+            "poster_path": "/zOTcfMu7srmkFJ7QA8z5zQu8s3r.jpg",
+            "vote_average": 1,
+            "vote_count": 1
+        },
+        {
+            "backdrop_path": "/9A07STwXqS46yDlR0FMSt9kIO3L.jpg",
+            "first_air_date": "2019-11-22",
+            "genre_ids": [
+                18
+            ],
+            "id": 97072,
+            "name": "Charmsukh",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "en",
+            "original_name": "Charmsukh",
+            "overview": "",
+            "popularity": 52.685,
+            "poster_path": "/6Kt9zIsrtqs1x1XyNFxOeEjlkKB.jpg",
+            "vote_average": 9,
+            "vote_count": 1
+        },
+        {
+            "backdrop_path": "/5RsLFOXFM1RfQoIKExNNX0TGdCE.jpg",
+            "first_air_date": "2020-04-30",
+            "genre_ids": [
+                18
+            ],
+            "id": 102823,
+            "name": "मस्तराम",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "मस्तराम",
+            "overview": "",
+            "popularity": 48.412,
+            "poster_path": "/j9FnTVX6SNSFSCy953rNmoyGOyM.jpg",
+            "vote_average": 6.7,
+            "vote_count": 3
+        },
+        {
+            "backdrop_path": "/fZPWqLYlbEu8fRdEj4AI2moDPIO.jpg",
+            "first_air_date": "2010-11-20",
+            "genre_ids": [
+                18,
+                80,
+                9648
+            ],
+            "id": 34522,
+            "name": "अदालत",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "अदालत",
+            "overview": "",
+            "popularity": 44.018,
+            "poster_path": "/m2G5WVHX4n2ETdBpAUHGK71C0J7.jpg",
+            "vote_average": 7,
+            "vote_count": 1
+        },
+        {
+            "backdrop_path": null,
+            "first_air_date": "2018-09-27",
+            "genre_ids": [
+                35
+            ],
+            "id": 82619,
+            "name": "X.X.X: Uncensored",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "X.X.X: Uncensored",
+            "overview": "",
+            "popularity": 41.769,
+            "poster_path": "/cufcKjv41k4sRJotdxwwHMDl70L.jpg",
+            "vote_average": 4.1,
+            "vote_count": 15
+        },
+        {
+            "backdrop_path": "/tjwXKgaoiS1tovSBNAxFYEpIQtO.jpg",
+            "first_air_date": "2020-10-05",
+            "genre_ids": [
+                18,
+                10766,
+                10751
+            ],
+            "id": 111453,
+            "name": "घुम है किसिकी प्यार में",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "घुम है किसिकी प्यार में",
+            "overview": "",
+            "popularity": 40.922,
+            "poster_path": "/uNjnoT3RChs2r7O9pDyx7TNBvIj.jpg",
+            "vote_average": 5.9,
+            "vote_count": 7
+        },
+        {
+            "backdrop_path": "/oQdTbWBqRbzTwEFdSiLFv7RKJsq.jpg",
+            "first_air_date": "2004-10-28",
+            "genre_ids": [
+                10764
+            ],
+            "id": 13700,
+            "name": "Indian Idol",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "Indian Idol",
+            "overview": "",
+            "popularity": 38.431,
+            "poster_path": "/igtVLnrSyMwPYtuWGFRSk3wlPel.jpg",
+            "vote_average": 5.5,
+            "vote_count": 8
+        },
+        {
+            "backdrop_path": "/8MFwS0m2aXgdGABgyJ0ecvCM84f.jpg",
+            "first_air_date": "2020-12-25",
+            "genre_ids": [
+                18
+            ],
+            "id": 125364,
+            "name": "Palang Tod",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "Palang Tod",
+            "overview": "",
+            "popularity": 37.577,
+            "poster_path": "/3jAeJu40uKy0ondWdzQxu0A97MT.jpg",
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "backdrop_path": "/8iimprgBCdYcOszUxMaYSjhsuNe.jpg",
+            "first_air_date": "2021-06-15",
+            "genre_ids": [
+                18
+            ],
+            "id": 127629,
+            "name": "Rupaya 500",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "en",
+            "original_name": "Rupaya 500",
+            "overview": "",
+            "popularity": 30.694,
+            "poster_path": "/qcQ7pt0ujePYrFrm4WpeglZfjBd.jpg",
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "backdrop_path": "/4MtpFKXUoJPwTmrL8aBy5ExTaMs.jpg",
+            "first_air_date": "2020-10-09",
+            "genre_ids": [
+                80,
+                18
+            ],
+            "id": 111188,
+            "name": "Scam 1992 - The Harshad Mehta Story",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "Scam 1992 - The Harshad Mehta Story",
+            "overview": "",
+            "popularity": 28.347,
+            "poster_path": "/2mwZEGm4Henyjo9BDg0ZhYKyOfz.jpg",
+            "vote_average": 8.5,
+            "vote_count": 48
+        },
+        {
+            "backdrop_path": "/AvYjbjY63kh8FgYlpgLJRGHc6H4.jpg",
+            "first_air_date": "2021-08-03",
+            "genre_ids": [
+                10766
+            ],
+            "id": 130542,
+            "name": "Bhagya Lakshmi",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "en",
+            "original_name": "Bhagya Lakshmi",
+            "overview": "",
+            "popularity": 25.95,
+            "poster_path": "/7XEE8LyVxEJl5l4IK9r1wytDBPm.jpg",
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "backdrop_path": "/nLjAcs4kikPWZpzyXMfHMlkMu80.jpg",
+            "first_air_date": "2021-06-10",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "id": 127306,
+            "name": "Indori Ishq",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "Indori Ishq",
+            "overview": "",
+            "popularity": 23.797,
+            "poster_path": "/ycr73aXiWjYOH7ECJ6zKfQUZLHm.jpg",
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "backdrop_path": "/pU8J0pVnKGd0I65HmMdBQ0aTvGK.jpg",
+            "first_air_date": "2017-11-27",
+            "genre_ids": [
+                10759,
+                10751
+            ],
+            "id": 78397,
+            "name": "पोरस",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "पोरस",
+            "overview": "",
+            "popularity": 22.771,
+            "poster_path": "/fvVisAxoxK11f4wdYla7bzfaVUQ.jpg",
+            "vote_average": 8.7,
+            "vote_count": 3
+        },
+        {
+            "backdrop_path": "/iMqdaAEp88Z9EJk8wWa3lRoVtC3.jpg",
+            "first_air_date": "2022-08-22",
+            "genre_ids": [
+                18
+            ],
+            "id": 208758,
+            "name": "Alibaba: Dastaan-E-Kabul",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "Alibaba: Dastaan-E-Kabul",
+            "overview": "",
+            "popularity": 22.593,
+            "poster_path": "/k8cPBnzdzO7Tqldht1nGJmTMcSQ.jpg",
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "backdrop_path": "/5moBvHKnNmW3KjykKQyUsZHdPeX.jpg",
+            "first_air_date": "2019-07-01",
+            "genre_ids": [
+                18
+            ],
+            "id": 91073,
+            "name": "Choti Sarrdaarni",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "Choti Sarrdaarni",
+            "overview": "",
+            "popularity": 22.413,
+            "poster_path": "/uMuB9iMaAMOeqip4LsZPLUcjlqg.jpg",
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "backdrop_path": "/C7114AWPFF5KoWnhv47gw2nSgi.jpg",
+            "first_air_date": "2018-11-15",
+            "genre_ids": [
+                80,
+                10759
+            ],
+            "id": 84105,
+            "name": "Mirzapur",
+            "origin_country": [
+                "IN"
+            ],
+            "original_language": "hi",
+            "original_name": "Mirzapur",
+            "overview": "",
+            "popularity": 21.458,
+            "poster_path": "/yuwE4sI4HxzAI4Sq2i1ja36kwCT.jpg",
+            "vote_average": 8.2,
+            "vote_count": 82
+        }
+    ],
+    "total_pages": 68,
+    "total_results": 1359
+}

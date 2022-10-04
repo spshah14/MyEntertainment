@@ -14,7 +14,6 @@ import Spinner from './Spinner';
 import InfiniteScroll from 'react-infinite-scroller';
 import profile from '../Avtar.jpg';
 
-
 const Movies = () => {
 
     const [optSmModal, setOptSmModal] = useState(false);
@@ -41,8 +40,6 @@ const Movies = () => {
     const [release_date, setRelease_date] = useState('')
     const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
-    const [textInput, setTextInput] = useState('')
-
 
     let parsedresults = [];
     const fetchData = async () => {
@@ -57,25 +54,7 @@ const Movies = () => {
         setPage(parsedresults.page)
         setLoading(false)
 
-
     }
-    const handleChange = (event) => {
-        setTextInput(event.target.value);
-    }
-
-    const handleClick = async () => {
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&query=${textInput}&with_origin_country=IN&include_adult=false&include_video=true&append_to_response=videos,images&page=1`
-
-        setLoading(true);
-        let results = await fetch(url)
-        parsedresults = await results.json()
-        setLoading(false)
-        setData(parsedresults.results)
-        setPage(parsedresults.page)
-        setLoading(false)
-    }
-
-
 
     useEffect(() => {
 
@@ -148,41 +127,45 @@ const Movies = () => {
         setLoading2(false)
         // console.log(parsedresults6);
 
+
     }
 
+
+    // console.log(data7)
     const image_path = "https://image.tmdb.org/t/p/original";
     const video_url = "https://www.youtube.com/embed/"
 
 
     return (<>
+        {/* <div className="container sbtnc">
+            <a className="btn btn-outline-primary sbtn" type="button" href="/search">Search</a>
+        </div> */}
         <div className='container my-4'>
 
-            <form className="d-flex my-3 stick" role="search" onSubmit={handleClick}>
-                <input className=" inputbackground me-2" type="search" onChange={handleChange} placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-primary" onClick={handleClick} type="button">Search</button>
-            </form>
             {loading && <Spinner key={1} />}
+
             <InfiniteScroll
                 pageStart={0}
                 loadMore={fetchMoreData}
                 hasMore={totalPages > page}
                 loader={<Spinner key={2} />}
-            >
+            ><div className=" c5 text-center">
 
-                <div className=" c5 text-center">
+
                     <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
+
                         {data.map((element) => {
-                            return <div className="col" key={element.id} onClick={() => fetchItems(element.id)} >
-                                <div className="card bg-image hover-overlay mx-2 my-1 bcolor" onClick={toggleShow} >
+                            return <div className="col my-3" key={element.id} onClick={() => fetchItems(element.id)} >
+                                <div className="card bg-image hover-overlay mx-2 bcolor moviecard h-100" onClick={toggleShow} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '17rem', width: 'auto', borderBottom: "1px solid white" }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '17rem', width: 'auto', borderBottom: "1px solid white" }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '14rem', width: 'auto', borderBottom: "0.1rem solid whitesmoke" }} />
+                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '14rem', width: 'auto', borderBottom: "0.1rem solid whitesmoke" }} />
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
                                     </a>
-                                    <div className="card-title my-4"> <b>{element.title}</b></div>
+                                    <div className="card-title my-4" id='movieTitle'> <b>{element.title}</b></div>
                                 </div>
                             </div>
                         })}

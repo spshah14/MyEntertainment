@@ -11,7 +11,7 @@ import {
     MDBNavbarNav,
     MDBNavbarItem,
     MDBNavbarLink,
-    MDBBtn,
+    // MDBBtn,
     // MDBDropdown,
     // MDBDropdownToggle,
     // MDBDropdownMenu,
@@ -82,9 +82,7 @@ const Navbar = () => {
                             <MDBNavbarItem>
                                 <MDBNavbarLink href='/movies' className={`nav-link ${location.pathname === "/movies" ? "active" : ""}`}>Movies</MDBNavbarLink>
                             </MDBNavbarItem>
-                            <MDBNavbarItem>
-                                <MDBNavbarLink href='/popular' className={`nav-link ${location.pathname === "/popular" ? "active" : ""}`}>Popular Movies</MDBNavbarLink>
-                            </MDBNavbarItem>
+
                             <MDBNavbarItem>
                                 <MDBNavbarLink href='/topmovies' className={`nav-link ${location.pathname === "/topmovies" ? "active" : ""}`}>Top Movies</MDBNavbarLink>
                             </MDBNavbarItem>
@@ -95,12 +93,19 @@ const Navbar = () => {
                                 <MDBNavbarLink href='/tvshows' className={`nav-link ${location.pathname === "/tvshows" ? "active" : ""}`}>TV Shows</MDBNavbarLink>
                             </MDBNavbarItem>
 
+
+
                         </MDBNavbarNav>
 
-                        <form className='d-flex input-group w-auto'>
-                            <input type='search' className='form-control' id="searchTxt" placeholder='Type query' aria-label='Search' />
-                            <MDBBtn color='primary'>Search</MDBBtn>
-                        </form>
+                        <div className="d-flex">
+                            <form className='d-flex input-group w-auto mx-1 my-1'>
+
+                                <a className="btn btn-outline-primary sbtn" type="button" href="/search">Search Movies</a>
+                            </form>
+                            <form className='d-flex input-group w-auto mx-1 my-1'>
+
+                                <a className="btn btn-outline-primary sbtn" type="button" href="/searchtv">Search Shows</a>
+                            </form></div>
                     </MDBCollapse>
                 </MDBContainer>
             </MDBNavbar>

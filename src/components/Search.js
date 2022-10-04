@@ -14,7 +14,8 @@ import Spinner from './Spinner';
 import InfiniteScroll from 'react-infinite-scroller';
 import profile from '../Avtar.jpg';
 
-const Topmovies = () => {
+const Search = () => {
+
     const [optSmModal, setOptSmModal] = useState(false);
 
     const toggleShow = () => setOptSmModal(!optSmModal);
@@ -25,6 +26,7 @@ const Topmovies = () => {
     const [data3, setData3] = useState([])
     const [data4, setData4] = useState([])
     const [data6, setData6] = useState(null)
+    const [data7, setData7] = useState([])
     const [page, setPage] = useState(1)
 
     const [totalPages, setTotalPages] = useState(1)
@@ -39,12 +41,13 @@ const Topmovies = () => {
     const [release_date, setRelease_date] = useState('')
     const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
+    const [textInput, setTextInput] = useState('')
+
 
     let parsedresults = [];
     const fetchData = async () => {
 
-        // const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
-        const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
+        const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
 
         setLoading(true);
         let results = await fetch(url)
@@ -54,7 +57,11 @@ const Topmovies = () => {
         setPage(parsedresults.page)
         setLoading(false)
 
+
     }
+
+
+
 
     useEffect(() => {
 
@@ -64,7 +71,7 @@ const Topmovies = () => {
 
     const fetchMoreData = async () => {
         // setPage(page + 1)
-        const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
+        const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
 
         // setLoading(true);
         let results = await fetch(url)
@@ -130,6 +137,47 @@ const Topmovies = () => {
 
     }
 
+    const handleChange = async (event) => {
+        setTextInput(event.target.value);
+        if (event.target.value === "") {
+            setData7([])
+        } else {
+            const url = `https://api.themoviedb.org/3/search/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&query=${event.target.value}&include_adult=false&with_origin_country=IN&include_video=true&append_to_response=videos,images`
+
+            setLoading(true);
+            let results = await fetch(url)
+            parsedresults = await results.json()
+            setLoading(false)
+            setData7(parsedresults.results)
+            setPage(parsedresults.page)
+            setLoading(false)
+        }
+
+        // setTextInput("");
+        // let search = document.getElementById("searchTxt").value.toLocaleLowerCase();
+
+        // event.target.value = '';
+    }
+    // const handleClick = async () => {
+
+    //     const url = `https://api.themoviedb.org/3/search/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&query=${textInput}&with_origin_country=IN&include_adult=false&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+
+    //     setLoading(true);
+    //     let results = await fetch(url)
+    //     parsedresults = await results.json()
+    //     setLoading(false)
+    //     setData7(parsedresults.results)
+    //     setPage(parsedresults.page)
+    //     setLoading(false)
+    //     // setTextInput("");
+    // }
+    const [submitted, setSubmitted] = useState('');
+    function handleSubmit(e) {
+        e.preventDefault();
+        setSubmitted(textInput);
+        // setTextInput("");
+    }
+
 
     // console.log(data7)
     const image_path = "https://image.tmdb.org/t/p/original";
@@ -137,26 +185,25 @@ const Topmovies = () => {
 
 
     return (<>
-        {/* <div className="container sbtnc">
-            <a className="btn btn-outline-primary sbtn" type="button" href="/search">Search</a>
-        </div> */}
         <div className='container my-4'>
 
-            {loading && <Spinner key={1} />}
+            <form className="d-flex my-3 stick" role="search" onSubmit={handleSubmit}>
+                <input className=" inputbackground me-2" value={textInput} type="search" onChange={handleChange} placeholder="Search Movies" aria-label="Search" />
+                <button className="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+            {/* {loading && <Spinner key={1} />} */}
 
             <InfiniteScroll
                 pageStart={0}
                 loadMore={fetchMoreData}
                 hasMore={totalPages > page}
-                loader={<Spinner key={2} />}
-            ><div className=" c5 text-center">
-
-
+            // loader={<Spinner key={2} />}
+            >
+                {(data7 !== []) && <div className=" c5 text-center my-50">
                     <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
-
-                        {data.map((element) => {
+                        {data7.map((element) => {
                             return <div className="col my-3" key={element.id} onClick={() => fetchItems(element.id)} >
-                                <div className="card bg-image hover-overlay mx-2 my-1 bcolor moviecard h-100" onClick={toggleShow} >
+                                <div className="card bg-image hover-overlay mx-2 my-1 bcolor h-100" onClick={toggleShow} >
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '14rem', width: 'auto', borderBottom: "1px solid white" }} />
@@ -165,22 +212,21 @@ const Topmovies = () => {
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
                                     </a>
-                                    <div className="card-title my-4" id='movieTitle'> <b>{element.title}</b></div>
+                                    <div className="card-title my-4"> <b>{element.title}</b></div>
                                 </div>
                             </div>
                         })}
                     </div>
-                </div>
-
+                </div>}
             </InfiniteScroll>
 
             <MDBModal show={optSmModal} tabIndex='-1' setShow={setOptSmModal}>
                 <MDBModalDialog size='xl' >
                     <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
                         {/* <MDBModalHeader>
-                            <MDBModalTitle className='container text-center'>{`${title}`}</MDBModalTitle>
-                            <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
-                        </MDBModalHeader> */}
+                <MDBModalTitle className='container text-center'>{`${title}`}</MDBModalTitle>
+                <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+            </MDBModalHeader> */}
                         <MDBModalBody>
                             {loading2 && <Spinner key={3} />}
                             {!loading2 && <div className="row">
@@ -309,8 +355,6 @@ const Topmovies = () => {
     </>
 
     )
-
-
 }
 
-export default Topmovies
+export default Search
