@@ -39,7 +39,7 @@ const Search = () => {
     const [tagline, setTagline] = useState('')
     const [rating, setRating] = useState('')
     const [release_date, setRelease_date] = useState('')
-    const [loading, setLoading] = useState(true)
+    // const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
     const [textInput, setTextInput] = useState('')
 
@@ -49,13 +49,13 @@ const Search = () => {
 
         const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
 
-        setLoading(true);
+        // setLoading(true);
         let results = await fetch(url)
         parsedresults = await results.json()
         setData(parsedresults.results)
         setTotalPages(parsedresults.total_pages)
         setPage(parsedresults.page)
-        setLoading(false)
+        // setLoading(false)
 
 
     }
@@ -76,7 +76,7 @@ const Search = () => {
         // setLoading(true);
         let results = await fetch(url)
         parsedresults = await results.json()
-        setLoading(false)
+        // setLoading(false)
         setData(data.concat(parsedresults.results))
         setPage(parsedresults.page)
     }
@@ -144,13 +144,13 @@ const Search = () => {
         } else {
             const url = `https://api.themoviedb.org/3/search/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&query=${event.target.value}&include_adult=false&with_origin_country=IN&include_video=true&append_to_response=videos,images`
 
-            setLoading(true);
+            // setLoading(true);
             let results = await fetch(url)
             parsedresults = await results.json()
-            setLoading(false)
+            // setLoading(false)
             setData7(parsedresults.results)
             setPage(parsedresults.page)
-            setLoading(false)
+            // setLoading(false)
         }
 
         // setTextInput("");
@@ -171,10 +171,10 @@ const Search = () => {
     //     setLoading(false)
     //     // setTextInput("");
     // }
-    const [submitted, setSubmitted] = useState('');
+    // const [submitted, setSubmitted] = useState('');
     function handleSubmit(e) {
         e.preventDefault();
-        setSubmitted(textInput);
+        // setSubmitted(textInput);
         // setTextInput("");
     }
 

@@ -16,6 +16,11 @@ import Topmovies from './components/Topmovies';
 import Upcomingmovie from './components/Upcomingmovie';
 import Search from './components/Search';
 import SearchTV from './components/SearchTV';
+import Reality from './components/Reality';
+import Documentary from './components/Documentary';
+import Miniseries from './components/Miniseries';
+import Scripted from './components/Scripted';
+import TalkShow from './components/TalkShow';
 
 function App() {
   return (
@@ -34,6 +39,11 @@ function App() {
             <Route path="/tvshows" element={<Tvshow />} />
             <Route path="/search" element={<Search />} />
             <Route path="/searchtv" element={<SearchTV />} />
+            <Route path="/Reality" element={<Reality />} />
+            <Route path="/Documentary" element={<Documentary />} />
+            <Route path="/Miniseries" element={<Miniseries />} />
+            <Route path="/Scripted" element={<Scripted />} />
+            <Route path="/TalkShow" element={<TalkShow />} />
 
           </Routes>
         </Router>

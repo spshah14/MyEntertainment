@@ -1,115 +1,81 @@
-import React, { useState } from 'react'
-// import {
-//     Link
-// } from "react-router-dom";
+import React from 'react'
 import {
-    MDBContainer,
-    MDBNavbar,
-    MDBNavbarBrand,
-    MDBNavbarToggler,
-    MDBIcon,
-    MDBNavbarNav,
-    MDBNavbarItem,
-    MDBNavbarLink,
-    // MDBBtn,
-    // MDBDropdown,
-    // MDBDropdownToggle,
-    // MDBDropdownMenu,
-    // MDBDropdownItem,
-    MDBCollapse,
-} from 'mdb-react-ui-kit';
+    Link
+} from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
-    const [showBasic, setShowBasic] = useState(false);
+
     let location = useLocation();
 
     return (
         <>
-            {/* <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">SMART TV</Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <Link className="navbar-brand" to="/home">SMART TV</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                                <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about">About</Link>
+                                <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} aria-current="page" to="/about">About</Link>
+                            </li>
+                            {/* <li className="nav-item">
+                                <Link to='/movies' className={`nav-link ${location.pathname === "/movies" ? "active" : ""}`}>Movies</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/movies">Movies</Link>
+                                <Link to='/topmovies' className={`nav-link ${location.pathname === "/topmovies" ? "active" : ""}`}>Top Movies</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to='/upcomingmovies' className={`nav-link ${location.pathname === "/upcomingmovies" ? "active" : ""}`}>Upcoming Movies</Link>
+                            </li> */}
+                            <li className="nav-item dropdown">
+                                <Link className={`nav-link ${location.pathname === "/movies" || location.pathname === "/topmovies" || location.pathname === "/upcomingmovies" ? "active" : ""} dropdown-toggle`} to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Movies
+                                </Link>
+                                <ul className="dropdown-menu" style={{ background: "black" }}>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/movies">All</Link></li>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/topmovies">Top Movies</Link></li>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/upcomingmovies">Upcoming Movies</Link></li>
+                                    {/* <li><Link className="dropdown-item" to="/Miniseries">Miniseries</Link></li>
+                                    <li><Link className="dropdown-item" to="/Scripted">Scripted</Link></li>
+                                    <li><Link className="dropdown-item" to="/TalkShow">TalkShow</Link></li> */}
+                                </ul>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <Link className={`nav-link ${location.pathname === "/tvshows" || location.pathname === "/Reality" || location.pathname === "/Documentary" || location.pathname === "/Miniseries" || location.pathname === "/Scripted" || location.pathname === "/TalkShow" ? "active" : ""} dropdown-toggle`} to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    TV Shows
+                                </Link>
+                                <ul className="dropdown-menu" style={{ background: "black" }}>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/tvshows">All</Link></li>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/Reality">Reality</Link></li>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/Documentary">Documentary</Link></li>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/Miniseries">Miniseries</Link></li>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/Scripted">Scripted</Link></li>
+                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/TalkShow">TalkShow</Link></li>
+                                </ul>
+                            </li>
+
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </nav> */}
-
-
-
-
-            <MDBNavbar expand='lg' dark bgColor='dark' sticky="true" transparent="true">
-                <MDBContainer fluid>
-                    <MDBNavbarBrand href='/'>SMART TV</MDBNavbarBrand>
-
-                    <MDBNavbarToggler
-                        aria-controls='navbarSupportedContent'
-                        aria-expanded='false'
-                        aria-label='Toggle navigation'
-                        onClick={() => setShowBasic(!showBasic)}
-                    >
-                        <MDBIcon icon='bars' fas />
-                    </MDBNavbarToggler>
-
-                    <MDBCollapse navbar show={showBasic}>
-                        <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
-                            <MDBNavbarItem>
-                                <MDBNavbarLink aria-current='page' href='/' className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>
-                                    Home
-                                </MDBNavbarLink>
-                            </MDBNavbarItem>
-                            <MDBNavbarItem>
-                                <MDBNavbarLink href='/about' className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}>About</MDBNavbarLink>
-                            </MDBNavbarItem>
-                            <MDBNavbarItem>
-                                <MDBNavbarLink href='/movies' className={`nav-link ${location.pathname === "/movies" ? "active" : ""}`}>Movies</MDBNavbarLink>
-                            </MDBNavbarItem>
-
-                            <MDBNavbarItem>
-                                <MDBNavbarLink href='/topmovies' className={`nav-link ${location.pathname === "/topmovies" ? "active" : ""}`}>Top Movies</MDBNavbarLink>
-                            </MDBNavbarItem>
-                            <MDBNavbarItem>
-                                <MDBNavbarLink href='/upcomingmovies' className={`nav-link ${location.pathname === "/upcomingmovies" ? "active" : ""}`}>Upcoming Movies</MDBNavbarLink>
-                            </MDBNavbarItem>
-                            <MDBNavbarItem>
-                                <MDBNavbarLink href='/tvshows' className={`nav-link ${location.pathname === "/tvshows" ? "active" : ""}`}>TV Shows</MDBNavbarLink>
-                            </MDBNavbarItem>
-
-
-
-                        </MDBNavbarNav>
-
                         <div className="d-flex">
                             <form className='d-flex input-group w-auto mx-1 my-1'>
 
-                                <a className="btn btn-outline-primary sbtn" type="button" href="/search">Search Movies</a>
+                                <Link className="btn btn-outline-primary sbtn" type="button" to="/search">Search Movies</Link>
                             </form>
                             <form className='d-flex input-group w-auto mx-1 my-1'>
 
-                                <a className="btn btn-outline-primary sbtn" type="button" href="/searchtv">Search Shows</a>
-                            </form></div>
-                    </MDBCollapse>
-                </MDBContainer>
-            </MDBNavbar>
-
+                                <Link className="btn btn-outline-primary sbtn" type="button" to="/searchtv">Search Shows</Link>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
         </>
     )

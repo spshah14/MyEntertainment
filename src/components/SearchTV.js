@@ -42,7 +42,7 @@ const SearchTV = () => {
     const [type, setType] = useState('')
     const [rating, setRating] = useState('')
     const [first_air_date, setFirst_air_date] = useState('')
-    const [loading, setLoading] = useState(true)
+    // const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
     const [textInput, setTextInput] = useState('')
 
@@ -53,13 +53,13 @@ const SearchTV = () => {
 
         const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
 
-        setLoading(true);
+        // setLoading(true);
         let results = await fetch(url)
         parsedresults = await results.json()
         setData(parsedresults.results)
         setTotalPages(parsedresults.total_pages)
         setPage(parsedresults.page)
-        setLoading(false)
+        // setLoading(false)
 
 
     }
@@ -80,7 +80,7 @@ const SearchTV = () => {
         // setLoading(true);
         let results = await fetch(url)
         parsedresults = await results.json()
-        setLoading(false)
+        // setLoading(false)
         setData(data.concat(parsedresults.results))
         setPage(parsedresults.page)
     }
@@ -151,13 +151,13 @@ const SearchTV = () => {
         } else {
             const url = `https://api.themoviedb.org/3/search/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&query=${event.target.value}&include_adult=false&with_origin_country=IN&include_video=true&append_to_response=videos,images`
 
-            setLoading(true);
+            // setLoading(true);
             let results = await fetch(url)
             let parsedresults = await results.json()
-            setLoading(false)
+            // setLoading(false)
             setData7(parsedresults.results)
             setPage(parsedresults.page)
-            setLoading(false)
+            // setLoading(false)
         }
 
         // setTextInput("");
@@ -178,10 +178,10 @@ const SearchTV = () => {
     //     // setTextInput("");
     // }
 
-    const [submitted, setSubmitted] = useState('');
+    // const [submitted, setSubmitted] = useState('');
     function handleSubmit(e) {
         e.preventDefault();
-        setSubmitted(textInput);
+        // setSubmitted(textInput);
         // setTextInput("");
     }
 
@@ -195,7 +195,7 @@ const SearchTV = () => {
         <div className='container my-4'>
 
             <form className="d-flex my-3 stick" role="search" onSubmit={handleSubmit}>
-                <input className=" inputbackground me-2" value={textInput} type="search" onChange={handleChange} placeholder="Search TV Shows, Documentary, Miniseries, Reality Show, Talk Show and News" aria-label="Search" />
+                <input className=" inputbackground me-2" value={textInput} type="search" onChange={handleChange} placeholder="Search TV Shows, Documentary, Miniseries, Reality Show and Talk Show" aria-label="Search" />
                 <button className="btn btn-outline-primary" type="submit">Search</button>
             </form>
             {/* {loading && <Spinner key={1} />} */}

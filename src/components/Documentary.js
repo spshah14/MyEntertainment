@@ -14,7 +14,7 @@ import Spinner from './Spinner';
 import InfiniteScroll from 'react-infinite-scroller';
 import profile from '../Avtar.jpg';
 
-const Tvshow = () => {
+const Documentary = () => {
     const [optSmModal, setOptSmModal] = useState(false);
 
     const toggleShow = () => setOptSmModal(!optSmModal);
@@ -46,7 +46,7 @@ const Tvshow = () => {
     let parsedresults = [];
     const fetchData = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=0&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
 
         setLoading(true);
         let results = await fetch(url)
@@ -65,7 +65,7 @@ const Tvshow = () => {
 
     const fetchMoreData = async () => {
         // setPage(page + 1)
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=0&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
 
         // setLoading(true);
         let results = await fetch(url)
@@ -136,23 +136,10 @@ const Tvshow = () => {
 
     return (
         <>
-
-
+            {/* <div className="container sbtnc">
+            <a className="btn btn-outline-primary sbtn" type="button" href="/search">Search</a>
+        </div> */}
             <div className='container my-4'>
-
-                {/* <div className="container my-4">
-                    <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" className="btn btn-outline-primary">All</button>
-                        <button type="button" className="btn btn-outline-primary">Reality</button>
-                        <button type="button" className="btn btn-outline-primary">Documentary</button>
-                        <button type="button" className="btn btn-outline-primary">Miniseries</button>
-                        <button type="button" className="btn btn-outline-primary">Scripted</button>
-                        <button type="button" className="btn btn-outline-primary">Talk Show</button>
-                    </div>
-                </div> */}
-
-
-
 
                 {loading && <Spinner key={1} />}
 
@@ -161,7 +148,7 @@ const Tvshow = () => {
                     loadMore={fetchMoreData}
                     hasMore={totalPages > page}
                     loader={<Spinner key={2} />}
-                ><div className=" c5 text-center my-3">
+                ><div className=" c5 text-center">
 
 
                         <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
@@ -363,4 +350,4 @@ const Tvshow = () => {
     )
 }
 
-export default Tvshow
+export default Documentary
