@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/MyEntertainment/static/css/main.2887c368.css",
+    "main.js": "/MyEntertainment/static/js/main.f8cb219f.js",
+    "static/js/787.e12d87f0.chunk.js": "/MyEntertainment/static/js/787.e12d87f0.chunk.js",
+    "static/media/video.png": "/MyEntertainment/static/media/video.825fa04ed0470feedc47.png",
+    "static/media/Avtar.jpg": "/MyEntertainment/static/media/Avtar.e62a0d998a1a8c009134.jpg",
+    "index.html": "/MyEntertainment/index.html",
+    "main.2887c368.css.map": "/MyEntertainment/static/css/main.2887c368.css.map",
+    "main.f8cb219f.js.map": "/MyEntertainment/static/js/main.f8cb219f.js.map",
+    "787.e12d87f0.chunk.js.map": "/MyEntertainment/static/js/787.e12d87f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2887c368.css",
+    "static/js/main.f8cb219f.js"
+  ]
+}
