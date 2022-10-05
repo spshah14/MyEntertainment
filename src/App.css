@@ -268,7 +268,7 @@ body{
 /* width */
 ::-webkit-scrollbar {
   /* width: 10px; */
-  height: 0.2rem;
+  height: 0.25rem;
 }
 
 /* ::-webkit-scrollbar-button{
@@ -281,7 +281,7 @@ body{
 } */
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: rgb(69, 68, 68);
 }
 
 /* Handle on hover */

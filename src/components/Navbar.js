@@ -15,8 +15,8 @@ const Navbar = () => {
 
             <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <Link class="navbar-brand" to="/">
-                        <img src={`${logo}`} alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
+                    <Link className="navbar-brand" to="/">
+                        <img src={`${logo}`} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
                         My Entertainment
                     </Link>
 
