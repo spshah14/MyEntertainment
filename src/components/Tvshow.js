@@ -148,8 +148,9 @@ const Tvshow = () => {
                         <button type="button" className="btn btn-outline-primary">Miniseries</button>
                         <button type="button" className="btn btn-outline-primary">Scripted</button>
                         <button type="button" className="btn btn-outline-primary">Talk Show</button>
-                    </div>
-                </div> */}
+                        </div>
+                    </div> */}
+                <div className="container my-3 text-center" style={{ color: "white" }}><h2>All Shows</h2></div>
 
 
 
@@ -162,7 +163,6 @@ const Tvshow = () => {
                     hasMore={totalPages > page}
                     loader={<Spinner key={2} />}
                 ><div className=" c5 text-center my-3">
-
 
                         <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
 

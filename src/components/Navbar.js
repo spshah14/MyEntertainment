@@ -3,6 +3,7 @@ import {
     Link
 } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import logo from './/video.png';
 
 
 const Navbar = () => {
@@ -14,7 +15,11 @@ const Navbar = () => {
 
             <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/home">SMART TV</Link>
+                    <Link class="navbar-brand" to="/">
+                        <img src={`${logo}`} alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
+                        My Entertainment
+                    </Link>
+
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -24,9 +29,6 @@ const Navbar = () => {
                                 <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} aria-current="page" to="/about">About</Link>
-                            </li>
-                            {/* <li className="nav-item">
                                 <Link to='/movies' className={`nav-link ${location.pathname === "/movies" ? "active" : ""}`}>Movies</Link>
                             </li>
                             <li className="nav-item">
@@ -34,22 +36,10 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link to='/upcomingmovies' className={`nav-link ${location.pathname === "/upcomingmovies" ? "active" : ""}`}>Upcoming Movies</Link>
-                            </li> */}
-                            <li className="nav-item dropdown">
-                                <Link className={`nav-link ${location.pathname === "/movies" || location.pathname === "/topmovies" || location.pathname === "/upcomingmovies" ? "active" : ""} dropdown-toggle`} to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Movies
-                                </Link>
-                                <ul className="dropdown-menu" style={{ background: "black" }}>
-                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/movies">All</Link></li>
-                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/topmovies">Top Movies</Link></li>
-                                    <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/upcomingmovies">Upcoming Movies</Link></li>
-                                    {/* <li><Link className="dropdown-item" to="/Miniseries">Miniseries</Link></li>
-                                    <li><Link className="dropdown-item" to="/Scripted">Scripted</Link></li>
-                                    <li><Link className="dropdown-item" to="/TalkShow">TalkShow</Link></li> */}
-                                </ul>
                             </li>
+
                             <li className="nav-item dropdown">
-                                <Link className={`nav-link ${location.pathname === "/tvshows" || location.pathname === "/Reality" || location.pathname === "/Documentary" || location.pathname === "/Miniseries" || location.pathname === "/Scripted" || location.pathname === "/TalkShow" ? "active" : ""} dropdown-toggle`} to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className={`nav-link ${location.pathname === "/tvshows" || location.pathname === "/Reality" || location.pathname === "/Documentary" || location.pathname === "/Miniseries" || location.pathname === "/Scripted" || location.pathname === "/TalkShow" ? "active" : ""} dropdown-toggle`} to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     TV Shows
                                 </Link>
                                 <ul className="dropdown-menu" style={{ background: "black" }}>

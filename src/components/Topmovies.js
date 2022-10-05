@@ -140,6 +140,7 @@ const Topmovies = () => {
         {/* <div className="container sbtnc">
             <a className="btn btn-outline-primary sbtn" type="button" href="/search">Search</a>
         </div> */}
+        <div className="container my-3 text-center" style={{ color: "white" }}><h2>Top Movies</h2></div>
         <div className='container my-4'>
 
             {loading && <Spinner key={1} />}
@@ -150,7 +151,6 @@ const Topmovies = () => {
                 hasMore={totalPages > page}
                 loader={<Spinner key={2} />}
             ><div className=" c5 text-center">
-
 
                     <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
 

@@ -140,6 +140,7 @@ const Movies = () => {
         {/* <div className="container sbtnc">
             <a className="btn btn-outline-primary sbtn" type="button" href="/search">Search</a>
         </div> */}
+        <div className="container my-3 text-center" style={{ color: "white" }}><h2>Movies</h2></div>
         <div className='container my-4'>
 
             {loading && <Spinner key={1} />}
@@ -151,8 +152,7 @@ const Movies = () => {
                 loader={<Spinner key={2} />}
             ><div className=" c5 text-center">
 
-
-                    <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
+                    <div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
 
                         {data.map((element) => {
                             return <div className="col my-3" key={element.id} onClick={() => fetchItems(element.id)} >

@@ -7,7 +7,6 @@ import {
   Route,
   // Router,
 } from "react-router-dom";
-import About from './components/About';
 import Home from './components/Home';
 import Movies from './components/Movies';
 // import Moviesmore from './components/Moviesmore';
@@ -31,7 +30,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="/topmovies" element={<Topmovies />} />
             <Route path="/upcomingmovies" element={<Upcomingmovie />} />
