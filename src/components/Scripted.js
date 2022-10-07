@@ -174,7 +174,7 @@ const Scripted = () => {
                 </InfiniteScroll>
 
                 <MDBModal show={optSmModal} tabIndex='-1' setShow={setOptSmModal}>
-                    <MDBModalDialog size='xl' >
+                    <MDBModalDialog size='lg' >
                         <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
                             {/* <MDBModalHeader>
                             <MDBModalTitle className='container text-center'>{`${title}`}</MDBModalTitle>

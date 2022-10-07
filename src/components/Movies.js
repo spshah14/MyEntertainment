@@ -175,7 +175,7 @@ const Movies = () => {
             </InfiniteScroll>
 
             <MDBModal show={optSmModal} tabIndex='-1' setShow={setOptSmModal}>
-                <MDBModalDialog size='xl' >
+                <MDBModalDialog size='lg' >
                     <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
                         {/* <MDBModalHeader>
                             <MDBModalTitle className='container text-center'>{`${title}`}</MDBModalTitle>
@@ -265,7 +265,7 @@ const Movies = () => {
                                                             : <img src={profile} alt="" className="card-img-top my-2 text-center" style={{ height: '11rem', width: '11rem' }} />
 
                                                     }
-                                                    <div className='text-center card-body' style={{ borderTop: "1px solid white" }}>
+                                                    <div className='text-center card-body h-100' style={{ borderTop: "1px solid white" }}>
                                                         <div className="card-text"> <b>{element.name}</b></div>
                                                         <div className="card-text text-wrap">Character<br /> {element.character}</div>
                                                     </div>

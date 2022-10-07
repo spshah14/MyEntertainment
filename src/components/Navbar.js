@@ -21,7 +21,7 @@ const Navbar = () => {
                     </Link>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <i className="fas fa-bars"></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,7 +42,7 @@ const Navbar = () => {
                                 <Link className={`nav-link ${location.pathname === "/tvshows" || location.pathname === "/Reality" || location.pathname === "/Documentary" || location.pathname === "/Miniseries" || location.pathname === "/Scripted" || location.pathname === "/TalkShow" ? "active" : ""} dropdown-toggle`} to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     TV Shows
                                 </Link>
-                                <ul className="dropdown-menu" style={{ background: "black" }}>
+                                <ul className="dropdown-menu" style={{ background: "#161111" }}>
                                     <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/tvshows">All</Link></li>
                                     <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/Reality">Reality</Link></li>
                                     <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/Documentary">Documentary</Link></li>

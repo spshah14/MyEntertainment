@@ -11,6 +11,10 @@ import {
     MDBModalFooter,
     MDBIcon,
 } from 'mdb-react-ui-kit';
+import {
+    MDBCarousel,
+    MDBCarouselItem,
+} from 'mdb-react-ui-kit';
 
 import Spinner from './Spinner';
 import profile from '../Avtar.jpg';
@@ -35,6 +39,10 @@ const Home = () => {
     const onChangeMessage = (event) => {
         setVaryingMessage(event.target.value);
     };
+
+    const [optSmModal, setOptSmModal] = useState(false);
+
+    const toggleShow = () => setOptSmModal(!optSmModal);
 
 
     const [data, setData] = useState([])
@@ -311,6 +319,95 @@ const Home = () => {
     return (<>
         {loading && <Spinner key={1} />}
         {!loading && <div className='my-4' style={{ color: 'white' }}>
+            <div className="container my-2">
+
+                <MDBCarousel showControls fade>
+                    {
+                        (data[0].backdrop_path &&
+                            <Link to="/movies"><MDBCarouselItem
+                                className='w-100 d-block'
+                                itemId={1}
+                                src={`${image_path}${data[0].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                                alt='...'
+                            >
+                                <h5>{`${data[0].title}`}</h5>
+                            </MDBCarouselItem></Link>)
+                    }
+                    {
+                        (data[1].backdrop_path &&
+                            <Link to="/movies"><MDBCarouselItem
+                                className='w-100 d-block'
+                                itemId={2}
+                                src={`${image_path}${data[1].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                                alt='...'
+                            >
+                                <h5>{`${data[1].title}`}</h5>
+                            </MDBCarouselItem></Link>)
+                    }
+                    {
+                        (data[2].backdrop_path &&
+                            <Link to="/movies"><MDBCarouselItem
+                                className='w-100 d-block'
+                                itemId={3}
+                                src={`${image_path}${data[2].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                                alt='...'
+                            >
+                                <h5>{`${data[2].title}`}</h5>
+                            </MDBCarouselItem></Link>)
+                    }
+                    {
+                        (data[3].backdrop_path &&
+
+                            <Link to="/movies"><MDBCarouselItem
+                                className='w-100 d-block'
+                                itemId={3}
+                                src={`${image_path}${data[3].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                                alt='...'
+                            >
+                                <h5>{`${data[3].title}`}</h5>
+                            </MDBCarouselItem></Link>)
+                    }
+                    {
+                        (data[4].backdrop_path &&
+
+                            <Link to="/movies"><MDBCarouselItem
+                                className='w-100 d-block'
+                                itemId={3}
+                                src={`${image_path}${data[4].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                                alt='...'
+                            >
+                                <h5>{`${data[4].title}`}</h5>
+                            </MDBCarouselItem></Link>)
+                    }
+                    {
+                        (data[5].backdrop_path &&
+
+                            <Link to="/movies"><MDBCarouselItem
+                                className='w-100 d-block'
+                                itemId={3}
+                                src={`${image_path}${data[5].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                                alt='...'
+                            >
+                                <h5>{`${data[5].title}`}</h5>
+                            </MDBCarouselItem></Link>)
+                    }
+                    {
+                        (data[6].backdrop_path &&
+
+                            <Link to="/movies"><MDBCarouselItem
+                                className='w-100 d-block'
+                                itemId={3}
+                                src={`${image_path}${data[6].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                                alt='...'
+                            >
+                                <h5>{`${data[6].title}`}</h5>
+                            </MDBCarouselItem></Link>)
+                    }
+
+                </MDBCarousel>
+
+            </div>
+
             <div className="container">
                 <Link to="/movies" className='linkcolor'><h4>Movies</h4></Link>
                 {/* <Link to="/movies" className="float-end linkcolor"><b>More</b></Link> */}
@@ -318,7 +415,7 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {data.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '10rem', width: '10rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '13rem', width: '13rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -326,8 +423,10 @@ const Home = () => {
                                 }} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
+
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -350,7 +449,7 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {topmovie.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '10rem', width: '10rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '13rem', width: '13rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -358,8 +457,9 @@ const Home = () => {
                                 }} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -381,7 +481,7 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {upcoming.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '10rem', width: '10rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '13rem', width: '13rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -389,8 +489,9 @@ const Home = () => {
                                 }} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -412,16 +513,13 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {tvshow.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '10rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
-                                    setVaryingState('@mdo');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@mdo');
-                                }} >
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -444,16 +542,13 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {reality.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '10rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
-                                    setVaryingState('@mdo');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@mdo');
-                                }} >
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -476,16 +571,13 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {documentary.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '10rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
-                                    setVaryingState('@mdo');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@mdo');
-                                }} >
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -507,16 +599,13 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {talkShow.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '10rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
-                                    setVaryingState('@mdo');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@mdo');
-                                }} >
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -538,16 +627,13 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {scripted.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '10rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
-                                    setVaryingState('@mdo');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@mdo');
-                                }} >
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -569,7 +655,7 @@ const Home = () => {
                     <div className="horizontal my-1">
 
                         {miniseries.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '10rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
                                     setVaryingState('@mdo');
                                     setVaryingModal(!varyingModal);
@@ -577,8 +663,9 @@ const Home = () => {
                                 }} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
-                                            : <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '10rem' }} />
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -593,12 +680,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="horizontal">
 
-                {/* <Movies />
-                <Tvshow /> */}
-
-            </div>
             {/* <MDBBtn
                 onClick={() => {
                     setVaryingState('@fat');
@@ -611,7 +693,7 @@ const Home = () => {
 
 
             <MDBModal show={varyingModal} setShow={setVaryingModal} tabIndex='-1'>
-                <MDBModalDialog size='xl'>
+                <MDBModalDialog size='lg'>
                     <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
 
                         <MDBModalBody>
@@ -738,10 +820,13 @@ const Home = () => {
             </MDBModal>
 
 
-            <MDBModal show={varyingModal} setShow={setVaryingModal} tabIndex='-1'>
-                <MDBModalDialog size='xl'>
+            <MDBModal show={optSmModal} tabIndex='-1' setShow={setOptSmModal}>
+                <MDBModalDialog size='lg' >
                     <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
-
+                        {/* <MDBModalHeader>
+                            <MDBModalTitle className='container text-center'>{`${title}`}</MDBModalTitle>
+                            <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+                        </MDBModalHeader> */}
                         <MDBModalBody>
                             {loading2 && <Spinner key={3} />}
                             {!loading2 && <div className="row">
@@ -896,11 +981,11 @@ const Home = () => {
 
                             </div>}
                         </MDBModalBody>
+
                         <MDBModalFooter>
-                            <MDBBtn color='primary' onClick={() => setVaryingModal(!varyingModal)}>
+                            <MDBBtn color='primary' onClick={toggleShow}>
                                 Close
                             </MDBBtn>
-
                         </MDBModalFooter>
                     </MDBModalContent>
                 </MDBModalDialog>
