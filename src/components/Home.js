@@ -324,85 +324,81 @@ const Home = () => {
 
                 <MDBCarousel showControls fade>
                     {
-                        (data[0].backdrop_path &&
-                            <Link to="/movies"><MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={1}
-                                src={`${image_path}${data[0].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
-                                alt='...'
-                            >
-                                <h5>{`${data[0].title}`}</h5>
-                            </MDBCarouselItem></Link>)
+                        (data[0].backdrop_path !== null) &&
+                        <Link to="/movies"><MDBCarouselItem
+                            className='w-100 d-block'
+                            itemId={1}
+                            src={`${image_path}${data[0].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            alt='...'
+                        >
+                        </MDBCarouselItem></Link>
                     }
                     {
-                        (data[1].backdrop_path &&
-                            <Link to="/movies"><MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={2}
-                                src={`${image_path}${data[1].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
-                                alt='...'
-                            >
-                                <h5>{`${data[1].title}`}</h5>
-                            </MDBCarouselItem></Link>)
+                        (data[1].backdrop_path !== null) &&
+                        <Link to="/movies"><MDBCarouselItem
+                            className='w-100 d-block'
+                            itemId={2}
+                            src={`${image_path}${data[1].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            alt='...'
+                        >
+                        </MDBCarouselItem></Link>
                     }
                     {
-                        (data[2].backdrop_path &&
-                            <Link to="/movies"><MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={3}
-                                src={`${image_path}${data[2].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
-                                alt='...'
-                            >
-                                <h5>{`${data[2].title}`}</h5>
-                            </MDBCarouselItem></Link>)
+                        (data[2].backdrop_path !== null) &&
+                        <Link to="/movies"><MDBCarouselItem
+                            className='w-100 d-block'
+                            itemId={3}
+                            src={`${image_path}${data[2].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            alt='...'
+                        >
+                        </MDBCarouselItem></Link>
                     }
                     {
-                        (data[3].backdrop_path &&
+                        (data[3].backdrop_path !== null) &&
 
-                            <Link to="/movies"><MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={3}
-                                src={`${image_path}${data[3].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
-                                alt='...'
-                            >
-                                <h5>{`${data[3].title}`}</h5>
-                            </MDBCarouselItem></Link>)
+                        <Link to="/movies"><MDBCarouselItem
+                            className='w-100 d-block'
+                            itemId={3}
+                            src={`${image_path}${data[3].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            alt='...'
+                        >
+                        </MDBCarouselItem></Link>
                     }
                     {
-                        (data[4].backdrop_path &&
+                        (tvshow[0].backdrop_path !== null) &&
 
-                            <Link to="/movies"><MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={3}
-                                src={`${image_path}${data[4].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
-                                alt='...'
-                            >
-                                <h5>{`${data[4].title}`}</h5>
-                            </MDBCarouselItem></Link>)
+                        <Link to="/movies"><MDBCarouselItem
+                            className='w-100 d-block'
+                            itemId={3}
+                            src={`${image_path}${tvshow[0].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            alt='...'
+                        >
+
+                        </MDBCarouselItem></Link>
                     }
                     {
-                        (data[5].backdrop_path &&
+                        (tvshow[1].backdrop_path !== null) &&
 
-                            <Link to="/movies"><MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={3}
-                                src={`${image_path}${data[5].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
-                                alt='...'
-                            >
-                                <h5>{`${data[5].title}`}</h5>
-                            </MDBCarouselItem></Link>)
+                        <Link to="/movies"><MDBCarouselItem
+                            className='w-100 d-block'
+                            itemId={3}
+                            src={`${image_path}${tvshow[1].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            alt='...'
+                        >
+
+                        </MDBCarouselItem></Link>
                     }
                     {
-                        (data[6].backdrop_path &&
+                        (tvshow[4].backdrop_path !== null) &&
 
-                            <Link to="/movies"><MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={3}
-                                src={`${image_path}${data[6].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
-                                alt='...'
-                            >
-                                <h5>{`${data[6].title}`}</h5>
-                            </MDBCarouselItem></Link>)
+                        <Link to="/movies"><MDBCarouselItem
+                            className='w-100 d-block'
+                            itemId={3}
+                            src={`${image_path}${tvshow[4].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            alt='...'
+                        >
+
+                        </MDBCarouselItem></Link>
                     }
 
                 </MDBCarousel>
