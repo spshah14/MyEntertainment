@@ -53,6 +53,7 @@ const Home = () => {
     const [data6, setData6] = useState(null)
     const [title, setTitle] = useState('')
     const [backdrop_path, setbackdrop_path] = useState(null)
+    const [backdrop_path2, setbackdrop_path2] = useState(null)
     const [poster_path, setPoster_path] = useState(null)
     const [overview, setOverview] = useState('')
     const [geners, setGeners] = useState([])
@@ -289,7 +290,7 @@ const Home = () => {
         setLoading2(false)
         // setData5(parsedresults5.results5)
         setTitle(parsedresults5.name)
-        setbackdrop_path(parsedresults5.backdrop_path)
+        setbackdrop_path2(parsedresults5.backdrop_path)
         setPoster_path(parsedresults5.poster_path)
         setOverview(parsedresults5.overview)
         setGeners(parsedresults5.genres)
@@ -853,8 +854,8 @@ const Home = () => {
                             {!loading2 && <div className="row">
                                 <div className="card mb-3 bodycolor" >
                                     <div className='bg-image hover-zoom'>
-                                        {(backdrop_path !== null)
-                                            ? <img src={`${image_path}${backdrop_path}`} className="card-img-top mx-auto d-block my-2" alt='' style={{ maxHeight: '700px', maxWidth: '700px', border: "1px solid white", borderRadius: '15px' }} />
+                                        {(backdrop_path2 !== null)
+                                            ? <img src={`${image_path}${backdrop_path2}`} className="card-img-top mx-auto d-block my-2" alt='' style={{ maxHeight: '700px', maxWidth: '700px', border: "1px solid white", borderRadius: '15px' }} />
                                             : <img src={`${image_path}${poster_path}`} className="card-img-top mx-auto d-block my-2" alt='' style={{ maxHeight: '500px', maxWidth: '500px', border: "1px solid white", borderRadius: '15px' }} />}
 
                                     </div>
