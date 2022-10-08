@@ -15,10 +15,10 @@ const Navbar = () => {
 
             <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">
+                    <a className="navbar-brand" href="/">
                         <img src={`${logo}`} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
                         My Entertainment
-                    </Link>
+                    </a>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="fas fa-bars"></i>
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/">Home</Link>
+                                <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/home">Home</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/movies' className={`nav-link ${location.pathname === "/movies" ? "active" : ""}`}>Movies</Link>

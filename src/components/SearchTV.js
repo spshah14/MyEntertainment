@@ -306,82 +306,83 @@ const SearchTV = () => {
                                         <b>seasons</b>
                                         <div className="horizontal">
                                             {seasons.map((element) => {
-                                                return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '12rem' }}>
+                                                return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '11rem' }}>
                                                     {
 
                                                         (element.poster_path !== null)
                                                             ?
                                                             <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
-                                                                <img src={`${image_path}${element.poster_path}`} alt="" className="card-img-top my-2 text-center" style={{ height: '11rem', width: '11rem' }} /></a>
-                                                            : <a href={`${image_path}${poster_path}`} target='-blank' rel="noopener noreferrer"><img src={`${image_path}${poster_path}`} alt="" className="card-img-top my-2 text-center" style={{ height: '11rem', width: '11rem' }} /></a>
+                                                                <img src={`${image_path}${element.poster_path}`} alt="" className="card-img-top text-center" style={{ height: '11rem', width: '11rem' }} /></a>
+                                                            : <a href={`${image_path}${poster_path}`} target='-blank' rel="noopener noreferrer"><img src={`${image_path}${poster_path}`} alt="" className="card-img-top text-center" style={{ height: '11rem', width: '11rem' }} /></a>
 
                                                     }
-                                                    <div className='text-center card-body' style={{ borderTop: "1px solid white" }}>
-                                                        <div className="card-text"> <b>{element.name}</b></div>
-                                                        <div className="card-text text-wrap">Total episode: {element.episode_count}</div>
-                                                        <div className="card-text text-wrap">First Air Date <br /> {element.air_date}</div>
+                                                    <div className='text-center' style={{ borderTop: "1px solid white", padding: "10px 1px" }}>
+                                                        {(element.name) && <div className="card-text text-wrap"> <b>{element.name}</b></div>}
+                                                        {(element.episode_count) && <div className="card-text text-wrap">Total episode: {element.episode_count}</div>}
+                                                        {(element.air_date) && <div className="card-text text-wrap">First Air Date <br /> {element.air_date}</div>}
                                                     </div>
                                                 </div>
                                             })}
                                         </div>
-                                        <br />
+
+                                        {(data2.length !== 0) &&
+                                            <div className='my-2'><b>Videos: </b>
+                                                <div className="horizontal">
+                                                    {data2.map((element) => {
+
+                                                        return <div key={element.key} className="slide1">
+                                                            <><iframe
+                                                                src={`${video_url}${element.key}`}
+                                                                title="YouTube video"
+                                                                allowFullScreen
+                                                                style={{ maxHeight: '275px', maxWidth: '275px', borderRadius: '15px' }}
+                                                            ></iframe>
+                                                                <div className='text-center'><b>{element.type}</b></div>
+                                                            </>
+                                                        </div>
+                                                    })}
+                                                </div></div>}
+
+                                        {(data3.length !== 0) &&
+                                            <div className='my-3'><b>Cast</b>
+                                                <div className="horizontal">
+                                                    {data3.map((element) => {
+                                                        return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '11rem' }}>
+                                                            {
+
+                                                                (element.profile_path !== null)
+                                                                    ?
+                                                                    <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
+                                                                        <img src={`${image_path}${element.profile_path}`} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} /></a>
+                                                                    : <img src={profile} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} />
+
+                                                            }
+
+                                                            <div className='text-center' style={{ borderTop: "1px solid white", padding: "10px 1px" }}>
+                                                                <div className="card-text text-wrap"> <b>{element.name}</b></div>
+                                                                {(element.character) && <div className="card-text text-wrap">Character<br /> {element.roles[0].character}</div>}
+                                                            </div>
+                                                        </div>
+                                                    })}
+                                                </div></div>}
 
 
-                                        <b>Videos: </b>
-                                        {(data2.length !== 0) ? <div className="horizontal">
-                                            {data2.map((element) => {
+                                        {(data4.length !== 0) &&
+                                            <div className='my-3'><b>Photos</b>
+                                                <div className="horizontal">
+                                                    {data4.map((element) => {
+                                                        return <div key={element.file_path} className="slide1">
+                                                            <div className="slide bg-image hover-zoom">
+                                                                <a href={`${image_path}${element.file_path}`} target='-blank' rel="noopener noreferrer">
+                                                                    <img src={`${image_path}${element.file_path}`} alt='...' className='img-fluid' style={{ maxHeight: '250px', maxWidth: '250px', borderRadius: '15px' }} />
+                                                                </a>
 
-                                                return <div key={element.key} className="slide1">
-                                                    <><iframe
-                                                        src={`${video_url}${element.key}`}
-                                                        title="YouTube video"
-                                                        allowFullScreen
-                                                        style={{ maxHeight: '300px', maxWidth: '300px' }}
-                                                    ></iframe>
-                                                        <div className='text-center'><b>{element.type}</b></div>
-                                                    </>
-                                                </div>
-                                            })}
-                                        </div> : <span> Not Availabe</span>}
+                                                            </div>
 
-                                        <br />
-                                        <br />
-                                        <b>Cast</b>
-                                        <div className="horizontal">
-                                            {data3.map((element) => {
-                                                return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '12rem' }}>
-                                                    {
-
-                                                        (element.profile_path !== null)
-                                                            ?
-                                                            <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
-                                                                <img src={`${image_path}${element.profile_path}`} alt="" className="card-img-top my-2 text-center" style={{ height: '11rem', width: '11rem' }} /></a>
-                                                            : <img src={profile} alt="" className="card-img-top my-2 text-center" style={{ height: '11rem', width: '11rem' }} />
-
-                                                    }
-                                                    <div className='text-center card-body' style={{ borderTop: "1px solid white" }}>
-                                                        <div className="card-text"> <b>{element.name}</b></div>
-                                                        {(element.roles[0].character) && <div className="card-text text-wrap">Character<br /> {element.roles[0].character}</div>}
-                                                    </div>
-                                                </div>
-                                            })}
-                                        </div>
-                                        <br />
-
-                                        <b>Photos</b>
-                                        <div className="horizontal">
-                                            {data4.map((element) => {
-                                                return <div key={element.file_path} className="slide1">
-                                                    <div className="slide bg-image hover-zoom">
-                                                        <a href={`${image_path}${element.file_path}`} target='-blank' rel="noopener noreferrer">
-                                                            <img src={`${image_path}${element.file_path}`} alt='...' className='img-fluid' style={{ maxHeight: '300px', maxWidth: '300px' }} />
-                                                        </a>
-
-                                                    </div>
-
-                                                </div>
-                                            })}
-                                        </div>
+                                                        </div>
+                                                    })}
+                                                </div></div>
+                                        }
 
                                     </div>
                                 </div>
