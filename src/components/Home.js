@@ -364,42 +364,42 @@ const Home = () => {
                         >
                         </MDBCarouselItem></Link>
                     }
-                    {/* {
-                        (tvshow[0].backdrop_path !== null) &&
+                    {
+                        (data[4].backdrop_path !== null) &&
 
                         <Link to="/movies"><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={3}
-                            src={`${image_path}${tvshow[0].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${data[4].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                         >
 
                         </MDBCarouselItem></Link>
                     }
                     {
-                        (tvshow[1].backdrop_path !== null) &&
+                        (data[5].backdrop_path !== null) &&
 
                         <Link to="/movies"><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={3}
-                            src={`${image_path}${tvshow[1].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${data[5].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                         >
 
                         </MDBCarouselItem></Link>
                     }
                     {
-                        (tvshow[4].backdrop_path !== null) &&
+                        (data[6].backdrop_path !== null) &&
 
                         <Link to="/movies"><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={3}
-                            src={`${image_path}${tvshow[4].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${data[6].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                         >
 
                         </MDBCarouselItem></Link>
-                    } */}
+                    }
 
                 </MDBCarousel>
 
