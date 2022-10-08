@@ -156,7 +156,7 @@ const Movies = () => {
 
                         {data.map((element) => {
                             return <div className="col my-3" key={element.id} onClick={() => fetchItems(element.id)} >
-                                <div className="card bg-image hover-overlay mx-2 bcolor moviecard h-100" onClick={toggleShow} >
+                                <div className="card bg-image hover-overlay mx-2 bcolor moviecard h-100" onClick={toggleShow} style={{ height: '14rem', width: 'auto', borderBottom: "0.1rem solid whitesmoke" }}>
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '14rem', width: 'auto', borderBottom: "0.1rem solid whitesmoke" }} />
@@ -187,8 +187,8 @@ const Movies = () => {
                                 <div className="card mb-3 bodycolor" >
                                     <div className='bg-image hover-zoom'>
                                         {(backdrop_path !== null)
-                                            ? <img src={`${image_path}${backdrop_path}`} className="card-img-top rounded mx-auto d-block my-2" alt='' style={{ maxHeight: '700px', maxWidth: '700px', border: "1px solid white", borderRadius: '15px' }} />
-                                            : <img src={`${image_path}${poster_path}`} className="card-img-top rounded mx-auto d-block my-2" alt='' style={{ maxHeight: '500px', maxWidth: '500px', border: "1px solid white", borderRadius: '15px' }} />}
+                                            ? <img src={`${image_path}${backdrop_path}`} className="card-img-top mx-auto d-block my-2" alt='' style={{ maxHeight: '700px', maxWidth: '700px', border: "1px solid white", borderRadius: '15px' }} />
+                                            : <img src={`${image_path}${poster_path}`} className="card-img-top mx-auto d-block my-2" alt='' style={{ maxHeight: '500px', maxWidth: '500px', border: "1px solid white", borderRadius: '15px' }} />}
 
                                     </div>
                                     <div className="card-body">
