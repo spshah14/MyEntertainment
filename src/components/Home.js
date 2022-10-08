@@ -358,7 +358,7 @@ const Home = () => {
 
                         <Link to="/movies"><MDBCarouselItem
                             className='w-100 d-block'
-                            itemId={3}
+                            itemId={4}
                             src={`${image_path}${data[3].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                         >
@@ -369,7 +369,7 @@ const Home = () => {
 
                         <Link to="/movies"><MDBCarouselItem
                             className='w-100 d-block'
-                            itemId={3}
+                            itemId={5}
                             src={`${image_path}${data[4].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                         >
@@ -381,7 +381,7 @@ const Home = () => {
 
                         <Link to="/movies"><MDBCarouselItem
                             className='w-100 d-block'
-                            itemId={3}
+                            itemId={6}
                             src={`${image_path}${data[5].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                         >
@@ -393,7 +393,7 @@ const Home = () => {
 
                         <Link to="/movies"><MDBCarouselItem
                             className='w-100 d-block'
-                            itemId={3}
+                            itemId={7}
                             src={`${image_path}${data[6].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                         >
