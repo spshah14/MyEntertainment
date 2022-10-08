@@ -40,9 +40,7 @@ const Home = () => {
         setVaryingMessage(event.target.value);
     };
 
-    const [optSmModal, setOptSmModal] = useState(false);
-
-    const toggleShow = () => setOptSmModal(!optSmModal);
+    const [scrollableModal, setScrollableModal] = useState(false);
 
 
     const [data, setData] = useState([])
@@ -511,7 +509,7 @@ const Home = () => {
 
                         {tvshow.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
@@ -540,7 +538,7 @@ const Home = () => {
 
                         {reality.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
@@ -569,7 +567,7 @@ const Home = () => {
 
                         {documentary.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
@@ -597,7 +595,7 @@ const Home = () => {
 
                         {talkShow.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
@@ -625,7 +623,7 @@ const Home = () => {
 
                         {scripted.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={toggleShow} >
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
@@ -653,11 +651,7 @@ const Home = () => {
 
                         {miniseries.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
-                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
-                                    setVaryingState('@mdo');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@mdo');
-                                }} >
+                                <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '13rem', width: '13rem' }} />
@@ -690,7 +684,7 @@ const Home = () => {
 
 
             <MDBModal show={varyingModal} setShow={setVaryingModal} tabIndex='-1'>
-                <MDBModalDialog size='lg'>
+                <MDBModalDialog size='lg' scrollable >
                     <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
 
                         <MDBModalBody>
@@ -838,12 +832,12 @@ const Home = () => {
             </MDBModal>
 
 
-            <MDBModal show={optSmModal} tabIndex='-1' setShow={setOptSmModal}>
-                <MDBModalDialog size='lg' >
+            <MDBModal show={scrollableModal} setShow={setScrollableModal} tabIndex='-1'>
+                <MDBModalDialog size='lg' scrollable>
                     <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
                         {/* <MDBModalHeader>
                             <MDBModalTitle className='container text-center'>{`${title}`}</MDBModalTitle>
-                            <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+                            <MDBBtn className='btn-close' color='none' onClick={() => setScrollableModal(!scrollableModal)}></MDBBtn>
                         </MDBModalHeader> */}
                         <MDBModalBody>
                             {loading2 && <Spinner key={3} />}
@@ -1002,7 +996,7 @@ const Home = () => {
                         </MDBModalBody>
 
                         <MDBModalFooter>
-                            <MDBBtn color='primary' onClick={toggleShow}>
+                            <MDBBtn color='primary' onClick={() => setScrollableModal(!scrollableModal)}>
                                 Close
                             </MDBBtn>
                         </MDBModalFooter>

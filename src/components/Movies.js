@@ -16,10 +16,7 @@ import profile from '../Avtar.jpg';
 
 const Movies = () => {
 
-    const [optSmModal, setOptSmModal] = useState(false);
-
-    const toggleShow = () => setOptSmModal(!optSmModal);
-
+    const [scrollableModal, setScrollableModal] = useState(false);
 
     const [data, setData] = useState([])
     const [data2, setData2] = useState([])
@@ -156,7 +153,7 @@ const Movies = () => {
 
                         {data.map((element) => {
                             return <div className="col my-3" key={element.id} onClick={() => fetchItems(element.id)} >
-                                <div className="card bg-image hover-overlay mx-2 bcolor moviecard h-100" onClick={toggleShow} style={{ height: '14rem', width: 'auto', borderBottom: "0.1rem solid whitesmoke" }}>
+                                <div className="card bg-image hover-overlay mx-2 bcolor moviecard h-100" onClick={() => setScrollableModal(!scrollableModal)} style={{ height: '14rem', width: 'auto', borderBottom: "0.1rem solid whitesmoke" }}>
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '14rem', width: 'auto', borderBottom: "0.1rem solid whitesmoke" }} />
@@ -174,8 +171,8 @@ const Movies = () => {
 
             </InfiniteScroll>
 
-            <MDBModal show={optSmModal} tabIndex='-1' setShow={setOptSmModal}>
-                <MDBModalDialog size='lg' >
+            <MDBModal show={scrollableModal} tabIndex='-1' setShow={setScrollableModal}>
+                <MDBModalDialog size='lg' scrollable>
                     <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
                         {/* <MDBModalHeader>
                             <MDBModalTitle className='container text-center'>{`${title}`}</MDBModalTitle>
@@ -295,7 +292,7 @@ const Movies = () => {
                         </MDBModalBody>
 
                         <MDBModalFooter>
-                            <MDBBtn color='primary' onClick={toggleShow}>
+                            <MDBBtn color='primary' onClick={() => setScrollableModal(!scrollableModal)}>
                                 Close
                             </MDBBtn>
                         </MDBModalFooter>

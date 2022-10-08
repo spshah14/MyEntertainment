@@ -16,9 +16,7 @@ import profile from '../Avtar.jpg';
 
 const SearchTV = () => {
 
-    const [optSmModal, setOptSmModal] = useState(false);
-
-    const toggleShow = () => setOptSmModal(!optSmModal);
+    const [scrollableModal, setScrollableModal] = useState(false);
 
 
     const [data, setData] = useState([])
@@ -210,7 +208,7 @@ const SearchTV = () => {
                     <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
                         {data7.map((element) => {
                             return <div className="col my-3" key={element.id} onClick={() => fetchItems(element.id)} >
-                                <div className="card bg-image hover-overlay mx-2 my-1 bcolor h-100" onClick={toggleShow} >
+                                <div className="card bg-image hover-overlay mx-2 my-1 bcolor h-100" onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
                                             ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '14rem', width: 'auto', borderBottom: "1px solid white" }} />
@@ -227,12 +225,12 @@ const SearchTV = () => {
                 </div>}
             </InfiniteScroll>
 
-            <MDBModal show={optSmModal} tabIndex='-1' setShow={setOptSmModal}>
-                <MDBModalDialog size='lg' >
+            <MDBModal show={scrollableModal} tabIndex='-1' setShow={setScrollableModal}>
+                <MDBModalDialog size='lg' scrollable >
                     <MDBModalContent className="bodycolor" style={{ border: "1px solid white", borderRadius: '15px' }}>
                         {/* <MDBModalHeader>
                             <MDBModalTitle className='container text-center'>{`${title}`}</MDBModalTitle>
-                            <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+                            <MDBBtn className='btn-close' color='none' onClick={() => setScrollableModal(!scrollableModal)}></MDBBtn>
                         </MDBModalHeader> */}
                         <MDBModalBody>
                             {loading2 && <Spinner key={3} />}
@@ -391,7 +389,7 @@ const SearchTV = () => {
                         </MDBModalBody>
 
                         <MDBModalFooter>
-                            <MDBBtn color='primary' onClick={toggleShow}>
+                            <MDBBtn color='primary' onClick={() => setScrollableModal(!scrollableModal)}>
                                 Close
                             </MDBBtn>
                         </MDBModalFooter>

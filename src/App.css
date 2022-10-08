@@ -239,6 +239,7 @@ body{
 /* width */
 ::-webkit-scrollbar {
   height: 0.25rem;
+  width: 0;
 }
 
 /* ::-webkit-scrollbar-button{
