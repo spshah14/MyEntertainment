@@ -364,7 +364,7 @@ const Home = () => {
                         >
                         </MDBCarouselItem></Link>
                     }
-                    {
+                    {/* {
                         (tvshow[0].backdrop_path !== null) &&
 
                         <Link to="/movies"><MDBCarouselItem
@@ -399,7 +399,7 @@ const Home = () => {
                         >
 
                         </MDBCarouselItem></Link>
-                    }
+                    } */}
 
                 </MDBCarousel>
 
