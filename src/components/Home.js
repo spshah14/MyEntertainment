@@ -71,6 +71,13 @@ const Home = () => {
     const [tvshow, setTvshow] = useState([])
     const [seasons, setSeasons] = useState([])
     const [networks, setNetworks] = useState([])
+    const [images1, setImages1] = useState(null)
+    const [images2, setImages2] = useState(null)
+    const [images3, setImages3] = useState(null)
+    const [images4, setImages4] = useState(null)
+    const [images5, setImages5] = useState(null)
+    const [images6, setImages6] = useState(null)
+    const [images7, setImages7] = useState(null)
 
     const [type, setType] = useState('')
 
@@ -87,6 +94,10 @@ const Home = () => {
         setData(parsedresults.results)
         // setTotalPages(parsedresults.total_pages)
         // setPage(parsedresults.page)
+        setImages1(parsedresults.results[0].backdrop_path)
+        setImages2(parsedresults.results[1].backdrop_path)
+        setImages3(parsedresults.results[2].backdrop_path)
+        setImages4(parsedresults.results[3].backdrop_path)
         setLoading(false)
 
     }
@@ -126,6 +137,9 @@ const Home = () => {
         let results = await fetch(url)
         parsedresults = await results.json()
         setTvshow(parsedresults.results)
+        setImages5(parsedresults.results[0].backdrop_path)
+        setImages6(parsedresults.results[1].backdrop_path)
+        setImages7(parsedresults.results[3].backdrop_path)
         setLoading(false)
     }
 
@@ -322,11 +336,11 @@ const Home = () => {
 
                 <MDBCarousel showControls fade>
                     {
-                        (data[0].backdrop_path !== null) &&
+                        (images1 !== null) &&
                         <Link onClick={() => fetchItems(data[0].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={1}
-                            src={`${image_path}${data[0].backdrop_path}`}
+                            src={`${image_path}${images1}`}
                             style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
@@ -338,11 +352,11 @@ const Home = () => {
                         </MDBCarouselItem></Link>
                     }
                     {
-                        (data[1].backdrop_path !== null) &&
+                        (images2 !== null) &&
                         <Link onClick={() => fetchItems(data[1].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={2}
-                            src={`${image_path}${data[1].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images2}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -353,11 +367,11 @@ const Home = () => {
                         </MDBCarouselItem></Link>
                     }
                     {
-                        (data[2].backdrop_path !== null) &&
+                        (images3 !== null) &&
                         <Link onClick={() => fetchItems(data[2].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={3}
-                            src={`${image_path}${data[2].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images3}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -368,12 +382,12 @@ const Home = () => {
                         </MDBCarouselItem></Link>
                     }
                     {
-                        (data[3].backdrop_path !== null) &&
+                        (images4 !== null) &&
 
                         <Link onClick={() => fetchItems(data[3].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={4}
-                            src={`${image_path}${data[3].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images4}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -384,52 +398,40 @@ const Home = () => {
                         </MDBCarouselItem></Link>
                     }
                     {
-                        (data[4].backdrop_path !== null) &&
+                        (images5 !== null) &&
 
-                        <Link onClick={() => fetchItems(data[4].id)}><MDBCarouselItem
+                        <Link onClick={() => fetchItems2(tvshow[0].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={5}
-                            src={`${image_path}${data[4].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images5}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
-                            onClick={() => {
-                                setVaryingState('@fat');
-                                setVaryingModal(!varyingModal);
-                                setVaryingRecipient('@fat');
-                            }}
+                            onClick={() => setScrollableModal(!scrollableModal)}
                         >
 
                         </MDBCarouselItem></Link>
                     }
                     {
-                        (data[5].backdrop_path !== null) &&
+                        (images6 !== null) &&
 
-                        <Link onClick={() => fetchItems(data[5].id)}><MDBCarouselItem
+                        <Link onClick={() => fetchItems2(tvshow[1].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={6}
-                            src={`${image_path}${data[5].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images6}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
-                            onClick={() => {
-                                setVaryingState('@fat');
-                                setVaryingModal(!varyingModal);
-                                setVaryingRecipient('@fat');
-                            }}
+                            onClick={() => setScrollableModal(!scrollableModal)}
                         >
 
                         </MDBCarouselItem></Link>
                     }
                     {
-                        (data[6].backdrop_path !== null) &&
+                        (images7 !== null) &&
 
-                        <Link onClick={() => fetchItems(data[6].id)}><MDBCarouselItem
+                        <Link onClick={() => fetchItems2(tvshow[3].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={7}
-                            src={`${image_path}${data[6].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images7}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
-                            onClick={() => {
-                                setVaryingState('@fat');
-                                setVaryingModal(!varyingModal);
-                                setVaryingRecipient('@fat');
-                            }}
+                            onClick={() => setScrollableModal(!scrollableModal)}
                         >
 
                         </MDBCarouselItem></Link>
