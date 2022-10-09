@@ -336,7 +336,7 @@ const Tvshow = () => {
 
                                                                 <div className='text-center' style={{ borderTop: "1px solid white", padding: "10px 1px" }}>
                                                                     <div className="card-text text-wrap"> <b>{element.name}</b></div>
-                                                                    {(element.character) && <div className="card-text text-wrap">Character<br /> {element.roles[0].character}</div>}
+                                                                    {(element.roles[0].character) && <div className="card-text text-wrap">Character<br /> {element.roles[0].character}</div>}
                                                                 </div>
                                                             </div>
                                                         })}
