@@ -815,26 +815,28 @@ const Home = () => {
                                                     })}
                                                 </div></div>}
 
-                                        <div className="horizontal">
-                                            {cast.map((element) => {
-                                                return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '11rem' }}>
-                                                    {
+                                        {(cast.length !== 0) &&
+                                            <div className='my-3'><br /><b>Cast</b>
+                                                <div className="horizontal">
+                                                    {cast.map((element) => {
+                                                        return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '11rem' }}>
+                                                            {
 
-                                                        (element.profile_path !== null)
-                                                            ?
-                                                            <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
-                                                                <img src={`${image_path}${element.profile_path}`} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} /></a>
-                                                            : <img src={profile} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} />
+                                                                (element.profile_path !== null)
+                                                                    ?
+                                                                    <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
+                                                                        <img src={`${image_path}${element.profile_path}`} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} /></a>
+                                                                    : <img src={profile} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} />
 
-                                                    }
+                                                            }
 
-                                                    <div className='text-center' style={{ borderTop: "1px solid white", padding: "10px 1px" }}>
-                                                        <div className="card-text text-wrap"> <b>{element.name}</b></div>
-                                                        {(element.character) && <div className="card-text text-wrap">Character<br /> {element.character}</div>}
-                                                    </div>
-                                                </div>
-                                            })}
-                                        </div>
+                                                            <div className='text-center' style={{ borderTop: "1px solid white", padding: "10px 1px" }}>
+                                                                <div className="card-text text-wrap"> <b>{element.name}</b></div>
+                                                                {(element.character) && <div className="card-text text-wrap">Character<br /> {element.character}</div>}
+                                                            </div>
+                                                        </div>
+                                                    })}
+                                                </div></div>}
 
                                     </div>
                                 </div>

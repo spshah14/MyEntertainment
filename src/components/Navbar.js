@@ -13,10 +13,10 @@ const Navbar = () => {
     return (
         <>
 
-            <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" style={{ background: "linear-gradient(to top, #202020, #1b1a1f, #15141d, #0f0b1b, #07001a)" }}>
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
-                        <img src={`${logo}`} alt="Logo" width="50" height="50" className="d-inline-block align-text-top" />
+                        <img src={`${logo}`} alt="Logo" width="40" height="40" className="d-inline-block align-text-top" />
                         My Entertainment
                     </Link>
 
