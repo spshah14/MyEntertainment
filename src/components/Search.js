@@ -185,9 +185,10 @@ const Search = () => {
     return (<>
         <div className='container my-4'>
 
+            <h4 className='text-white'>Search Movies</h4>
             <form className="d-flex my-3 stick" role="search" onSubmit={handleSubmit}>
-                <input className=" inputbackground me-2" value={textInput} type="search" onChange={handleChange} placeholder="Search Movies" aria-label="Search" />
-                <button className="btn btn-outline-primary" type="submit">Search</button>
+                <input className="inputbackground me-2" value={textInput} type="search" onChange={handleChange} placeholder="Search" aria-label="Search" />
+                <button className="btn btn-outline-light" type="submit">Search</button>
             </form>
             {/* {loading && <Spinner key={1} />} */}
 
@@ -273,6 +274,23 @@ const Search = () => {
                                             })}
                                         </div>
 
+                                        {(data4.length !== 0) &&
+                                            <div className='my-3'><b>Photos</b>
+                                                <div className="horizontal">
+                                                    {data4.map((element) => {
+                                                        return <div key={element.file_path} className="slide1">
+                                                            <div className="slide bg-image hover-zoom">
+                                                                <a href={`${image_path}${element.file_path}`} target='-blank' rel="noopener noreferrer">
+                                                                    <img src={`${image_path}${element.file_path}`} alt='...' className='img-fluid' style={{ maxHeight: '250px', maxWidth: '250px', borderRadius: '15px' }} />
+                                                                </a>
+
+                                                            </div>
+
+                                                        </div>
+                                                    })}
+                                                </div></div>
+                                        }
+
                                         {(data2.length !== 0) &&
                                             <div className='my-2'><b>Videos: </b>
                                                 <div className="horizontal">
@@ -291,7 +309,7 @@ const Search = () => {
                                                     })}
                                                 </div></div>}
 
-                                        {(data4.length !== 0) &&
+                                        {(data3.length !== 0) &&
                                             <div className='my-3'><b>Cast</b>
                                                 <div className="horizontal">
                                                     {data3.map((element) => {
@@ -313,23 +331,6 @@ const Search = () => {
                                                         </div>
                                                     })}
                                                 </div></div>}
-
-                                        {(data4.length !== 0) &&
-                                            <div className='my-3'><b>Photos</b>
-                                                <div className="horizontal">
-                                                    {data4.map((element) => {
-                                                        return <div key={element.file_path} className="slide1">
-                                                            <div className="slide bg-image hover-zoom">
-                                                                <a href={`${image_path}${element.file_path}`} target='-blank' rel="noopener noreferrer">
-                                                                    <img src={`${image_path}${element.file_path}`} alt='...' className='img-fluid' style={{ maxHeight: '250px', maxWidth: '250px', borderRadius: '15px' }} />
-                                                                </a>
-
-                                                            </div>
-
-                                                        </div>
-                                                    })}
-                                                </div></div>
-                                        }
 
                                     </div>
                                 </div>

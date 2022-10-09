@@ -230,7 +230,7 @@ const Tvshow = () => {
 
                                             })}
                                             <br />
-                                            <div className='my-1'><b>Production House:</b></div>
+                                            <div className='my-1'><b>Production House</b></div>
                                             <div className="horizontal">
                                                 {production.map((element) => {
                                                     return <div key={element.id} className="slide1">
@@ -245,7 +245,7 @@ const Tvshow = () => {
                                             <br />
 
                                             <br />
-                                            <div className='my-1'><b>Networks:</b></div>
+                                            <div className='my-1'><b>Networks</b></div>
                                             <div className="horizontal">
                                                 {networks.map((element) => {
                                                     return <div key={element.id} className="slide1">
@@ -258,7 +258,41 @@ const Tvshow = () => {
                                                     </div>
                                                 })}
                                             </div>
-                                            <br />
+
+                                            {(data4.length !== 0) &&
+                                                <div className='my-3'><b>Photos</b>
+                                                    <div className="horizontal">
+                                                        {data4.map((element) => {
+                                                            return <div key={element.file_path} className="slide1">
+                                                                <div className="slide bg-image hover-zoom">
+                                                                    <a href={`${image_path}${element.file_path}`} target='-blank' rel="noopener noreferrer">
+                                                                        <img src={`${image_path}${element.file_path}`} alt='...' className='img-fluid' style={{ maxHeight: '250px', maxWidth: '250px', borderRadius: '15px' }} />
+                                                                    </a>
+
+                                                                </div>
+
+                                                            </div>
+                                                        })}
+                                                    </div></div>
+                                            }
+
+                                            {(data2.length !== 0) &&
+                                                <div className='my-2'><b>Videos </b>
+                                                    <div className="horizontal">
+                                                        {data2.map((element) => {
+
+                                                            return <div key={element.key} className="slide1">
+                                                                <><iframe
+                                                                    src={`${video_url}${element.key}`}
+                                                                    title="YouTube video"
+                                                                    allowFullScreen
+                                                                    style={{ maxHeight: '275px', maxWidth: '275px', borderRadius: '15px' }}
+                                                                ></iframe>
+                                                                    <div className='text-center'><b>{element.type}</b></div>
+                                                                </>
+                                                            </div>
+                                                        })}
+                                                    </div></div>}
 
                                             <div className='my-1'><b>Seasons</b></div>
                                             <div className="horizontal">
@@ -282,24 +316,6 @@ const Tvshow = () => {
                                                 })}
                                             </div>
 
-                                            {(data2.length !== 0) &&
-                                                <div className='my-2'><b>Videos: </b>
-                                                    <div className="horizontal">
-                                                        {data2.map((element) => {
-
-                                                            return <div key={element.key} className="slide1">
-                                                                <><iframe
-                                                                    src={`${video_url}${element.key}`}
-                                                                    title="YouTube video"
-                                                                    allowFullScreen
-                                                                    style={{ maxHeight: '275px', maxWidth: '275px', borderRadius: '15px' }}
-                                                                ></iframe>
-                                                                    <div className='text-center'><b>{element.type}</b></div>
-                                                                </>
-                                                            </div>
-                                                        })}
-                                                    </div></div>}
-
                                             {(data3.length !== 0) &&
                                                 <div className='my-3'><b>Cast</b>
                                                     <div className="horizontal">
@@ -322,24 +338,6 @@ const Tvshow = () => {
                                                             </div>
                                                         })}
                                                     </div></div>}
-
-
-                                            {(data4.length !== 0) &&
-                                                <div className='my-3'><b>Photos</b>
-                                                    <div className="horizontal">
-                                                        {data4.map((element) => {
-                                                            return <div key={element.file_path} className="slide1">
-                                                                <div className="slide bg-image hover-zoom">
-                                                                    <a href={`${image_path}${element.file_path}`} target='-blank' rel="noopener noreferrer">
-                                                                        <img src={`${image_path}${element.file_path}`} alt='...' className='img-fluid' style={{ maxHeight: '250px', maxWidth: '250px', borderRadius: '15px' }} />
-                                                                    </a>
-
-                                                                </div>
-
-                                                            </div>
-                                                        })}
-                                                    </div></div>
-                                            }
 
                                         </div>
                                     </div>
