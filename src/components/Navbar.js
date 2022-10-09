@@ -15,10 +15,10 @@ const Navbar = () => {
 
             <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/">
+                    <Link className="navbar-brand" to="/">
                         <img src={`${logo}`} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
                         My Entertainment
-                    </a>
+                    </Link>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="fas fa-bars"></i>
@@ -37,9 +37,12 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link to='/upcomingmovies' className={`nav-link ${location.pathname === "/upcomingmovies" ? "active" : ""}`}>Upcoming Movies</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to='/tvshows' className={`nav-link ${location.pathname === "/tvshows" || location.pathname === "/Reality" || location.pathname === "/Documentary" || location.pathname === "/Miniseries" || location.pathname === "/Scripted" || location.pathname === "/TalkShow" ? "active" : ""}`}>TV Shows</Link>
+                            </li>
 
-                            <li className="nav-item dropdown">
-                                <Link className={`nav-link ${location.pathname === "/tvshows" || location.pathname === "/Reality" || location.pathname === "/Documentary" || location.pathname === "/Miniseries" || location.pathname === "/Scripted" || location.pathname === "/TalkShow" ? "active" : ""} dropdown-toggle`} to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {/* <li className="nav-item dropdown">
+                                <Link className={`nav-link ${location.pathname === "/tvshows" || location.pathname === "/Reality" || location.pathname === "/Documentary" || location.pathname === "/Miniseries" || location.pathname === "/Scripted" || location.pathname === "/TalkShow" ? "active" : ""} dropdown-toggle`} to="/tvshows" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     TV Shows
                                 </Link>
                                 <ul className="dropdown-menu" style={{ background: "#161111" }}>
@@ -50,7 +53,7 @@ const Navbar = () => {
                                     <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/Scripted">Scripted</Link></li>
                                     <li><Link className="dropdown-item" style={{ color: "#1266f1" }} to="/TalkShow">TalkShow</Link></li>
                                 </ul>
-                            </li>
+                            </li> */}
 
                         </ul>
                         <div className="d-flex">

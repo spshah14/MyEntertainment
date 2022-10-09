@@ -57,7 +57,7 @@ const Home = () => {
     const [geners, setGeners] = useState([])
     const [production, setProduction] = useState([])
     const [tagline, setTagline] = useState('')
-    const [rating, setRating] = useState('')
+    const [rating, setRating] = useState(0)
     const [release_date, setRelease_date] = useState('')
     const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
@@ -315,7 +315,7 @@ const Home = () => {
     const image_path = "https://image.tmdb.org/t/p/original";
     const video_url = "https://www.youtube.com/embed/"
 
-    return (<>
+    return (<div className='my-3'>
         {loading && <Spinner key={1} />}
         {!loading && <div className='my-4' style={{ color: 'white' }}>
             <div className="container my-2">
@@ -323,53 +323,79 @@ const Home = () => {
                 <MDBCarousel showControls fade>
                     {
                         (data[0].backdrop_path !== null) &&
-                        <Link to="/movies"><MDBCarouselItem
+                        <Link onClick={() => fetchItems(data[0].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={1}
-                            src={`${image_path}${data[0].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${data[0].backdrop_path}`}
+                            style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
+                            onClick={() => {
+                                setVaryingState('@fat');
+                                setVaryingModal(!varyingModal);
+                                setVaryingRecipient('@fat');
+                            }}
                         >
                         </MDBCarouselItem></Link>
                     }
                     {
                         (data[1].backdrop_path !== null) &&
-                        <Link to="/movies"><MDBCarouselItem
+                        <Link onClick={() => fetchItems(data[1].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={2}
                             src={`${image_path}${data[1].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
+                            onClick={() => {
+                                setVaryingState('@fat');
+                                setVaryingModal(!varyingModal);
+                                setVaryingRecipient('@fat');
+                            }}
                         >
                         </MDBCarouselItem></Link>
                     }
                     {
                         (data[2].backdrop_path !== null) &&
-                        <Link to="/movies"><MDBCarouselItem
+                        <Link onClick={() => fetchItems(data[2].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={3}
                             src={`${image_path}${data[2].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
+                            onClick={() => {
+                                setVaryingState('@fat');
+                                setVaryingModal(!varyingModal);
+                                setVaryingRecipient('@fat');
+                            }}
                         >
                         </MDBCarouselItem></Link>
                     }
                     {
                         (data[3].backdrop_path !== null) &&
 
-                        <Link to="/movies"><MDBCarouselItem
+                        <Link onClick={() => fetchItems(data[3].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={4}
                             src={`${image_path}${data[3].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
+                            onClick={() => {
+                                setVaryingState('@fat');
+                                setVaryingModal(!varyingModal);
+                                setVaryingRecipient('@fat');
+                            }}
                         >
                         </MDBCarouselItem></Link>
                     }
                     {
                         (data[4].backdrop_path !== null) &&
 
-                        <Link to="/movies"><MDBCarouselItem
+                        <Link onClick={() => fetchItems(data[4].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={5}
                             src={`${image_path}${data[4].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
+                            onClick={() => {
+                                setVaryingState('@fat');
+                                setVaryingModal(!varyingModal);
+                                setVaryingRecipient('@fat');
+                            }}
                         >
 
                         </MDBCarouselItem></Link>
@@ -377,11 +403,16 @@ const Home = () => {
                     {
                         (data[5].backdrop_path !== null) &&
 
-                        <Link to="/movies"><MDBCarouselItem
+                        <Link onClick={() => fetchItems(data[5].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={6}
                             src={`${image_path}${data[5].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
+                            onClick={() => {
+                                setVaryingState('@fat');
+                                setVaryingModal(!varyingModal);
+                                setVaryingRecipient('@fat');
+                            }}
                         >
 
                         </MDBCarouselItem></Link>
@@ -389,11 +420,16 @@ const Home = () => {
                     {
                         (data[6].backdrop_path !== null) &&
 
-                        <Link to="/movies"><MDBCarouselItem
+                        <Link onClick={() => fetchItems(data[6].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={7}
                             src={`${image_path}${data[6].backdrop_path}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
                             alt='...'
+                            onClick={() => {
+                                setVaryingState('@fat');
+                                setVaryingModal(!varyingModal);
+                                setVaryingRecipient('@fat');
+                            }}
                         >
 
                         </MDBCarouselItem></Link>
@@ -704,25 +740,24 @@ const Home = () => {
                                         </div>}
 
                                         {(`${tagline}` !== '') && <><b>Tagline:</b><span className="card-text mx-1 my-1">{` ${tagline}`}</span></>}
-                                        <br />
 
-                                        {(`${overview}` !== '') && <><b>Overview:</b><span className="card-text mx-1 my-1">{`${overview}`}</span></>}
-                                        <br />
 
-                                        {(`${release_date}` !== '') && <><b>Release Date:</b><span className="card-text mx-1 my-1">{`${release_date}`}</span></>}
-                                        <br />
+                                        {(`${overview}` !== '') && <><br /><b>Overview:</b><span className="card-text mx-1 my-1">{`${overview}`}</span></>}
 
-                                        {(`${rating}` !== '') &&
-                                            <>
+
+                                        {(`${release_date}` !== '') && <><br /><b>Release Date:</b><span className="card-text mx-1 my-1">{`${release_date}`}</span></>}
+
+                                        {(rating !== 0) &&
+                                            <><br />
                                                 <b>Rating:</b><span className="card-text mx-1 my-1">{` ${rating} `}<i className="fa-solid fa-star"></i></span>
                                             </>}
-                                        <br />
 
-                                        <b>Genres:</b>
-                                        {geners.map((element) => {
-                                            return <span className="card-text generborder mx-1 my-1">{` ${element.name} `}</span>
 
-                                        })}
+                                        {(geners.length !== 0) && <><br /><b>Genres:</b>
+                                            {geners.map((element) => {
+                                                return <span className="card-text generborder mx-1 my-1">{` ${element.name} `}</span>
+
+                                            })}</>}
                                         <br />
                                         <div className='my-1'><b>Production House:</b></div>
                                         <div className="horizontal">
@@ -751,29 +786,6 @@ const Home = () => {
                                                             ></iframe>
                                                                 <div className='text-center'><b>{element.type}</b></div>
                                                             </>
-                                                        </div>
-                                                    })}
-                                                </div></div>}
-
-                                        {(data4.length !== 0) &&
-                                            <div className='my-3'><b>Cast</b>
-                                                <div className="horizontal">
-                                                    {data3.map((element) => {
-                                                        return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '11rem' }}>
-                                                            {
-
-                                                                (element.profile_path !== null)
-                                                                    ?
-                                                                    <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
-                                                                        <img src={`${image_path}${element.profile_path}`} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} /></a>
-                                                                    : <img src={profile} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} />
-
-                                                            }
-
-                                                            <div className='text-center' style={{ borderTop: "1px solid white", padding: "10px 1px" }}>
-                                                                <div className="card-text text-wrap"> <b>{element.name}</b></div>
-                                                                {(element.character) && <div className="card-text text-wrap">Character<br /> {element.character}</div>}
-                                                            </div>
                                                         </div>
                                                     })}
                                                 </div></div>}
@@ -864,10 +876,10 @@ const Home = () => {
                                         <br />
 
                                         {(`${first_air_date}` !== '') && <><b>First Air Date:</b><span className="card-text mx-1 my-1">{`${first_air_date}`}</span></>}
-                                        <br />
 
-                                        {(`${rating}` !== '') &&
-                                            <>
+
+                                        {(rating !== 0) &&
+                                            <><br />
                                                 <b>Rating:</b><span className="card-text mx-1 my-1">{` ${rating} `}<i className="fa-solid fa-star"></i></span>
                                             </>}
                                         <br />
@@ -908,7 +920,7 @@ const Home = () => {
                                         </div>
                                         <br />
 
-                                        <b>seasons</b>
+                                        <div className='my-1'><b>Seasons</b></div>
                                         <div className="horizontal">
                                             {seasons.map((element) => {
                                                 return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '11rem' }}>
@@ -1003,7 +1015,7 @@ const Home = () => {
                     </MDBModalContent>
                 </MDBModalDialog>
             </MDBModal>
-        </div>}</>
+        </div>}</div>
     )
 }
 

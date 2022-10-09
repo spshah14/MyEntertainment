@@ -38,7 +38,7 @@ const SearchTV = () => {
     const [networks, setNetworks] = useState([])
     const [tagline, setTagline] = useState('')
     const [type, setType] = useState('')
-    const [rating, setRating] = useState('')
+    const [rating, setRating] = useState(0)
     const [first_air_date, setFirst_air_date] = useState('')
     // const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
@@ -257,10 +257,8 @@ const SearchTV = () => {
                                         <br />
 
                                         {(`${first_air_date}` !== '') && <><b>First Air Date:</b><span className="card-text mx-1 my-1">{`${first_air_date}`}</span></>}
-                                        <br />
-
-                                        {(`${rating}` !== '') &&
-                                            <>
+                                        {(rating !== 0) &&
+                                            <><br />
                                                 <b>Rating:</b><span className="card-text mx-1 my-1">{` ${rating} `}<i className="fa-solid fa-star"></i></span>
                                             </>}
                                         <br />

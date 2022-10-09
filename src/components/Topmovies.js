@@ -34,7 +34,7 @@ const Topmovies = () => {
     const [geners, setGeners] = useState([])
     const [production, setProduction] = useState([])
     const [tagline, setTagline] = useState('')
-    const [rating, setRating] = useState('')
+    const [rating, setRating] = useState(0)
     const [release_date, setRelease_date] = useState('')
     const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
@@ -203,10 +203,8 @@ const Topmovies = () => {
                                         <br />
 
                                         {(`${release_date}` !== '') && <><b>Release Date:</b><span className="card-text mx-1 my-1">{`${release_date}`}</span></>}
-                                        <br />
-
-                                        {(`${rating}` !== '') &&
-                                            <>
+                                        {(rating !== 0) &&
+                                            <><br />
                                                 <b>Rating:</b><span className="card-text mx-1 my-1">{` ${rating} `}<i className="fa-solid fa-star"></i></span>
                                             </>}
                                         <br />

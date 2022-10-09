@@ -141,8 +141,8 @@ const Upcomingmovie = () => {
         {/* <div className="container sbtnc">
             <a className="btn btn-outline-primary sbtn" type="button" href="/search">Search</a>
         </div> */}
-        <div className="container my-3 text-center" style={{ color: "white" }}><h2>Upcoming Movies</h2></div>
         <div className='container my-4'>
+            <div className="container my-3 text-center" style={{ color: "white" }}><h2>Upcoming Movies</h2></div>
             {loading && <Spinner key={1} />}
 
             <InfiniteScroll

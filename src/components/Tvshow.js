@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {
+    Link
+} from "react-router-dom";
+import {
     MDBBtn,
     MDBModal,
     MDBModalDialog,
@@ -36,7 +39,7 @@ const Tvshow = () => {
     const [networks, setNetworks] = useState([])
     const [tagline, setTagline] = useState('')
     const [type, setType] = useState('')
-    const [rating, setRating] = useState('')
+    const [rating, setRating] = useState(0)
     const [first_air_date, setFirst_air_date] = useState('')
     const [loading, setLoading] = useState(true)
     const [loading2, setLoading2] = useState(true)
@@ -138,17 +141,15 @@ const Tvshow = () => {
 
             <div className='container my-4'>
 
-                {/* <div className="container my-4">
-                    <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" className="btn btn-outline-primary">All</button>
-                        <button type="button" className="btn btn-outline-primary">Reality</button>
-                        <button type="button" className="btn btn-outline-primary">Documentary</button>
-                        <button type="button" className="btn btn-outline-primary">Miniseries</button>
-                        <button type="button" className="btn btn-outline-primary">Scripted</button>
-                        <button type="button" className="btn btn-outline-primary">Talk Show</button>
-                        </div>
-                    </div> */}
-                <div className="container my-3 text-center" style={{ color: "white" }}><h2>All Shows</h2></div>
+                <div className="container text-center">
+
+                    <Link type="button" to="/Reality" class="btn btn-outline-info mx-1 my-1">Reality</Link>
+                    <Link type="button" to="/Scripted" class="btn btn-outline-info mx-1 my-1">Scripted</Link>
+                    <Link type="button" to="/TalkShow" class="btn btn-outline-info mx-1 my-1">TalkShow</Link>
+                    <Link type="button" to="/Documentary" class="btn btn-outline-info mx-1 my-1">Documentary</Link>
+                    <Link type="button" to="/Miniseries" class="btn btn-outline-info mx-1 my-1">Miniseries</Link>
+                </div>
+                <div className="container my-3 text-center" style={{ color: "#c7d2db" }}><h3>All Shows</h3></div>
 
 
 
@@ -161,6 +162,7 @@ const Tvshow = () => {
                     hasMore={totalPages > page}
                     loader={<Spinner key={2} />}
                 ><div className=" c5 text-center my-3">
+
 
                         <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
 
@@ -216,10 +218,8 @@ const Tvshow = () => {
                                             <br />
 
                                             {(`${first_air_date}` !== '') && <><b>First Air Date:</b><span className="card-text mx-1 my-1">{`${first_air_date}`}</span></>}
-                                            <br />
-
-                                            {(`${rating}` !== '') &&
-                                                <>
+                                            {(rating !== 0) &&
+                                                <><br />
                                                     <b>Rating:</b><span className="card-text mx-1 my-1">{` ${rating} `}<i className="fa-solid fa-star"></i></span>
                                                 </>}
                                             <br />
@@ -260,7 +260,7 @@ const Tvshow = () => {
                                             </div>
                                             <br />
 
-                                            <b>seasons</b>
+                                            <div className='my-1'><b>Seasons</b></div>
                                             <div className="horizontal">
                                                 {seasons.map((element) => {
                                                     return <div key={element.id} className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '11rem' }}>
