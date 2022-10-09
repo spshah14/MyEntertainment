@@ -20,7 +20,6 @@ import Documentary from './components/Documentary';
 import Miniseries from './components/Miniseries';
 import Scripted from './components/Scripted';
 import TalkShow from './components/TalkShow';
-import Footer from './components/Footer';
 
 function App() {
   return (
@@ -46,7 +45,6 @@ function App() {
             <Route path="/TalkShow" element={<TalkShow />} />
 
           </Routes>
-          <Footer />
         </Router>
       </div>
     </>
