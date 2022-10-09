@@ -268,7 +268,7 @@ const Reality = () => {
                                                         }
                                                         <div className='text-center' style={{ borderTop: "1px solid white", padding: "10px 1px" }}>
                                                             {(element.name) && <div className="card-text text-wrap"> <b>{element.name}</b></div>}
-                                                            {(element.episode_count) && <div className="card-text text-wrap">Total episode: {element.episode_count}</div>}
+                                                            {(element.episode_count !== 0) && <div className="card-text text-wrap">Total episode: {element.episode_count}</div>}
                                                             {(element.air_date) && <div className="card-text text-wrap">First Air Date <br /> {element.air_date}</div>}
                                                         </div>
                                                     </div>
