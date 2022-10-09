@@ -3,7 +3,7 @@ import {
     Link
 } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import logo from './/video.png';
+import logo from './/play-button.png';
 
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
             <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
-                        <img src={`${logo}`} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
+                        <img src={`${logo}`} alt="Logo" width="50" height="50" className="d-inline-block align-text-top" />
                         My Entertainment
                     </Link>
 
