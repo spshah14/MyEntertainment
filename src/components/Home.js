@@ -357,7 +357,7 @@ const Home = () => {
                             className='w-100 d-block'
                             itemId={2}
                             src={`${image_path}${images2}`}
-                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
+                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -373,7 +373,7 @@ const Home = () => {
                             className='w-100 d-block'
                             itemId={3}
                             src={`${image_path}${images3}`}
-                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
+                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -390,7 +390,7 @@ const Home = () => {
                             className='w-100 d-block'
                             itemId={4}
                             src={`${image_path}${images4}`}
-                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
+                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -407,7 +407,7 @@ const Home = () => {
                             className='w-100 d-block'
                             itemId={5}
                             src={`${image_path}${images5}`}
-                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
+                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => setScrollableModal(!scrollableModal)}
                         >
@@ -421,7 +421,7 @@ const Home = () => {
                             className='w-100 d-block'
                             itemId={6}
                             src={`${image_path}${images6}`}
-                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
+                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => setScrollableModal(!scrollableModal)}
                         >
@@ -435,7 +435,7 @@ const Home = () => {
                             className='w-100 d-block'
                             itemId={7}
                             src={`${image_path}${images7}`}
-                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
+                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => setScrollableModal(!scrollableModal)}
                         >
