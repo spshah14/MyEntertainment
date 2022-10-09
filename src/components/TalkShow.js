@@ -47,7 +47,7 @@ const TalkShow = () => {
     let parsedresults = [];
     const fetchData = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=5&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
 
         setLoading(true);
         let results = await fetch(url)
@@ -66,7 +66,7 @@ const TalkShow = () => {
 
     const fetchMoreData = async () => {
         // setPage(page + 1)
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=5&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
 
         // setLoading(true);
         let results = await fetch(url)
