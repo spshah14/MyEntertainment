@@ -341,7 +341,7 @@ const Home = () => {
                             className='w-100 d-block'
                             itemId={1}
                             src={`${image_path}${images1}`}
-                            style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -356,7 +356,8 @@ const Home = () => {
                         <Link onClick={() => fetchItems(data[1].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={2}
-                            src={`${image_path}${images2}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images2}`}
+                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -371,7 +372,8 @@ const Home = () => {
                         <Link onClick={() => fetchItems(data[2].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={3}
-                            src={`${image_path}${images3}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images3}`}
+                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -387,7 +389,8 @@ const Home = () => {
                         <Link onClick={() => fetchItems(data[3].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={4}
-                            src={`${image_path}${images4}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images4}`}
+                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => {
                                 setVaryingState('@fat');
@@ -403,7 +406,8 @@ const Home = () => {
                         <Link onClick={() => fetchItems2(tvshow[0].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={5}
-                            src={`${image_path}${images5}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images5}`}
+                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => setScrollableModal(!scrollableModal)}
                         >
@@ -416,7 +420,8 @@ const Home = () => {
                         <Link onClick={() => fetchItems2(tvshow[1].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={6}
-                            src={`${image_path}${images6}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images6}`}
+                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => setScrollableModal(!scrollableModal)}
                         >
@@ -429,7 +434,8 @@ const Home = () => {
                         <Link onClick={() => fetchItems2(tvshow[3].id)}><MDBCarouselItem
                             className='w-100 d-block'
                             itemId={7}
-                            src={`${image_path}${images7}`} style={{ height: '50vh', width: '100%', objectFit: "contain" }}
+                            src={`${image_path}${images7}`}
+                            style={{ height: '2rem', width: '100%', objectFit: "contain" }}
                             alt='...'
                             onClick={() => setScrollableModal(!scrollableModal)}
                         >
