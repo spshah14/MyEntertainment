@@ -409,7 +409,7 @@ const Home = () => {
                 <Link to="/movies" className='linkcolor'><h4>Movies</h4></Link>
                 {/* <Link to="/movies" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {data.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -434,7 +434,9 @@ const Home = () => {
 
 
                         })}
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/movies" className='linkcolor'><div><h5>More Movies</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
 
                     </div>
                 </div>
@@ -443,7 +445,7 @@ const Home = () => {
                 <Link to="/topmovies" className='linkcolor'><h4>Top Movies</h4></Link>
                 {/* <Link to="/topmovies" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {topmovie.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -466,7 +468,9 @@ const Home = () => {
                             </div>
 
                         })}
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/topmovies" className='linkcolor'><div><h5>More Top Movies</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
 
                     </div>
                 </div>
@@ -475,7 +479,7 @@ const Home = () => {
                 <Link to="/upcomingmovies" className='linkcolor'><h4>Upcoming Movies</h4></Link>
                 {/* <Link to="/upcomingmovies" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {upcoming.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -498,7 +502,9 @@ const Home = () => {
                             </div>
 
                         })}
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/upcomingmovies" className='linkcolor'><div><h5>More Upcoming Movies</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
 
                     </div>
                 </div>
@@ -507,7 +513,7 @@ const Home = () => {
                 <Link to="/tvshows" className='linkcolor'><h4>TV Shows</h4></Link>
                 {/* <Link to="/tvshows" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {tvshow.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -526,7 +532,9 @@ const Home = () => {
                             </div>
 
                         })}
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/tvshows" className='linkcolor'><div><h5>More TV Shows</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
 
                     </div>
                 </div>
@@ -536,7 +544,7 @@ const Home = () => {
                 <Link to="/Reality" className='linkcolor'><h4>Reality Shows</h4></Link>
                 {/* <Link to="/Reality" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {reality.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -555,7 +563,9 @@ const Home = () => {
                             </div>
 
                         })}
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Reality" className='linkcolor'><div><h5>More Reality Shows</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
 
                     </div>
                 </div>
@@ -565,7 +575,7 @@ const Home = () => {
                 <Link to="/Documentary" className='linkcolor'><h4>Documentary</h4></Link>
                 {/* <Link to="/Documentary" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {documentary.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -584,7 +594,9 @@ const Home = () => {
                             </div>
 
                         })}
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Documentary" className='linkcolor'><div><h5>More Documentary Shows</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
 
                     </div>
                 </div>
@@ -593,7 +605,7 @@ const Home = () => {
                 <Link to="/TalkShow" className='linkcolor'><h4>TalkShow</h4></Link>
                 {/* <Link to="/TalkShow" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {talkShow.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -612,7 +624,9 @@ const Home = () => {
                             </div>
 
                         })}
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/TalkShow" className='linkcolor'><div><h5>More TalkShows</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
 
                     </div>
                 </div>
@@ -621,7 +635,7 @@ const Home = () => {
                 <Link to="/Scripted" className='linkcolor'><h4>Scripted Shows</h4></Link>
                 {/* <Link to="/Scripted" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {scripted.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -640,7 +654,9 @@ const Home = () => {
                             </div>
 
                         })}
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Scripted" className='linkcolor'><div><h5>More Scripted Shows</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
 
                     </div>
                 </div>
@@ -649,7 +665,7 @@ const Home = () => {
                 <Link to="/Miniseries" className='linkcolor'><h4>Miniseries</h4></Link>
                 {/* <Link to="/Miniseries" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal my-1">
+                    <div className="horizontal horizontal2 my-1">
 
                         {miniseries.map((element) => {
                             return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '13rem', width: '13rem' }}>
@@ -669,7 +685,9 @@ const Home = () => {
 
                         })}
 
-
+                        <div>
+                            <div className='container text-center text-wrap' style={{ height: '13rem', width: '13rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Miniseries" className='linkcolor'><div><h5>More Miniseries</h5></div><div><p>Click here</p></div></Link></div>
+                        </div>
                     </div>
                 </div>
             </div>

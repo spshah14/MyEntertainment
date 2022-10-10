@@ -11,7 +11,12 @@
     white-space: nowrap;
     /* scroll-behavior: hidden; */
     scroll-behavior:smooth;
+    /* display: flex; */
   
+    }
+
+    .horizontal2{
+      display: flex;
     }
     
 .slide1 {
@@ -272,5 +277,5 @@ body{
 }
 
 .linkcolor:hover{
-  color:#1266f1 !important;
+  color:#90fcba !important;
 }
