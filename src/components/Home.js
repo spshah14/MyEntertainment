@@ -334,7 +334,7 @@ const Home = () => {
                     <div className="carousel-inner">
                         {
                             (images1 !== null) &&
-                            <div className="carousel-item active" onClick={() => fetchItems(data[0].id)}>
+                            <div className="carousel-item active" data-bs-interval="4000" onClick={() => fetchItems(data[0].id)}>
                                 <img src={`${image_path}${images1}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -344,7 +344,7 @@ const Home = () => {
                         }
                         {
                             (images2 !== null) &&
-                            <div className="carousel-item active" onClick={() => fetchItems(data[1].id)}>
+                            <div className="carousel-item" data-bs-interval="4000" onClick={() => fetchItems(data[1].id)}>
                                 <img src={`${image_path}${images2}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -354,7 +354,7 @@ const Home = () => {
                         }
                         {
                             (images3 !== null) &&
-                            <div className="carousel-item active" onClick={() => fetchItems(data[2].id)}>
+                            <div className="carousel-item" data-bs-interval="4000" onClick={() => fetchItems(data[2].id)}>
                                 <img src={`${image_path}${images3}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -364,7 +364,7 @@ const Home = () => {
                         }
                         {
                             (images4 !== null) &&
-                            <div className="carousel-item active" onClick={() => fetchItems(data[3].id)}>
+                            <div className="carousel-item" data-bs-interval="4000" onClick={() => fetchItems(data[3].id)}>
                                 <img src={`${image_path}${images4}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -374,32 +374,20 @@ const Home = () => {
                         }
                         {
                             (images5 !== null) &&
-                            <div className="carousel-item active" onClick={() => fetchItems(tvshow[0].id)}>
-                                <img src={`${image_path}${images5}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
-                                    setVaryingState('@fat');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@fat');
-                                }} />
+                            <div className="carousel-item" data-bs-interval="4000" onClick={() => fetchItems2(tvshow[0].id)}>
+                                <img src={`${image_path}${images5}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => setScrollableModal(!scrollableModal)} />
                             </div>
                         }
                         {
                             (images6 !== null) &&
-                            <div className="carousel-item active" onClick={() => fetchItems(tvshow[1].id)}>
-                                <img src={`${image_path}${images6}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
-                                    setVaryingState('@fat');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@fat');
-                                }} />
+                            <div className="carousel-item" data-bs-interval="4000" onClick={() => fetchItems2(tvshow[1].id)}>
+                                <img src={`${image_path}${images6}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => setScrollableModal(!scrollableModal)} />
                             </div>
                         }
                         {
                             (images7 !== null) &&
-                            <div className="carousel-item active" onClick={() => fetchItems(tvshow[2].id)}>
-                                <img src={`${image_path}${images7}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
-                                    setVaryingState('@fat');
-                                    setVaryingModal(!varyingModal);
-                                    setVaryingRecipient('@fat');
-                                }} />
+                            <div className="carousel-item" data-bs-interval="4000" onClick={() => fetchItems2(tvshow[2].id)}>
+                                <img src={`${image_path}${images7}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => setScrollableModal(!scrollableModal)} />
                             </div>
                         }
 
