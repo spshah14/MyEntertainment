@@ -386,7 +386,7 @@ const Home = () => {
                         }
                         {
                             (images7 !== null) &&
-                            <div className="carousel-item" data-bs-interval="4000" onClick={() => fetchItems2(tvshow[2].id)}>
+                            <div className="carousel-item" data-bs-interval="4000" onClick={() => fetchItems2(tvshow[3].id)}>
                                 <img src={`${image_path}${images7}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => setScrollableModal(!scrollableModal)} />
                             </div>
                         }
