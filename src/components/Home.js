@@ -11,10 +11,6 @@ import {
     MDBModalFooter,
     MDBIcon,
 } from 'mdb-react-ui-kit';
-import {
-    MDBCarousel,
-    MDBCarouselItem,
-} from 'mdb-react-ui-kit';
 
 import Spinner from './Spinner';
 import profile from '../Avtar.jpg';
@@ -334,116 +330,90 @@ const Home = () => {
         {!loading && <div className='my-4' style={{ color: 'white' }}>
             <div className="container my-2">
 
-                <MDBCarousel showControls fade>
-                    {
-                        (images1 !== null) &&
-                        <Link onClick={() => fetchItems(data[0].id)}><MDBCarouselItem
-                            className='w-100 d-block'
-                            itemId={1}
-                            src={`${image_path}${images1}`}
-                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
-                            alt='...'
-                            onClick={() => {
-                                setVaryingState('@fat');
-                                setVaryingModal(!varyingModal);
-                                setVaryingRecipient('@fat');
-                            }}
-                        >
-                        </MDBCarouselItem></Link>
-                    }
-                    {
-                        (images2 !== null) &&
-                        <Link onClick={() => fetchItems(data[1].id)}><MDBCarouselItem
-                            className='w-100 d-block'
-                            itemId={2}
-                            src={`${image_path}${images2}`}
-                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
-                            alt='...'
-                            onClick={() => {
-                                setVaryingState('@fat');
-                                setVaryingModal(!varyingModal);
-                                setVaryingRecipient('@fat');
-                            }}
-                        >
-                        </MDBCarouselItem></Link>
-                    }
-                    {
-                        (images3 !== null) &&
-                        <Link onClick={() => fetchItems(data[2].id)}><MDBCarouselItem
-                            className='w-100 d-block'
-                            itemId={3}
-                            src={`${image_path}${images3}`}
-                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
-                            alt='...'
-                            onClick={() => {
-                                setVaryingState('@fat');
-                                setVaryingModal(!varyingModal);
-                                setVaryingRecipient('@fat');
-                            }}
-                        >
-                        </MDBCarouselItem></Link>
-                    }
-                    {
-                        (images4 !== null) &&
+                <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                        {
+                            (images1 !== null) &&
+                            <div className="carousel-item active" onClick={() => fetchItems(data[0].id)}>
+                                <img src={`${image_path}${images1}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
+                                    setVaryingState('@fat');
+                                    setVaryingModal(!varyingModal);
+                                    setVaryingRecipient('@fat');
+                                }} />
+                            </div>
+                        }
+                        {
+                            (images2 !== null) &&
+                            <div className="carousel-item active" onClick={() => fetchItems(data[1].id)}>
+                                <img src={`${image_path}${images2}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
+                                    setVaryingState('@fat');
+                                    setVaryingModal(!varyingModal);
+                                    setVaryingRecipient('@fat');
+                                }} />
+                            </div>
+                        }
+                        {
+                            (images3 !== null) &&
+                            <div className="carousel-item active" onClick={() => fetchItems(data[2].id)}>
+                                <img src={`${image_path}${images3}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
+                                    setVaryingState('@fat');
+                                    setVaryingModal(!varyingModal);
+                                    setVaryingRecipient('@fat');
+                                }} />
+                            </div>
+                        }
+                        {
+                            (images4 !== null) &&
+                            <div className="carousel-item active" onClick={() => fetchItems(data[3].id)}>
+                                <img src={`${image_path}${images4}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
+                                    setVaryingState('@fat');
+                                    setVaryingModal(!varyingModal);
+                                    setVaryingRecipient('@fat');
+                                }} />
+                            </div>
+                        }
+                        {
+                            (images5 !== null) &&
+                            <div className="carousel-item active" onClick={() => fetchItems(tvshow[0].id)}>
+                                <img src={`${image_path}${images5}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
+                                    setVaryingState('@fat');
+                                    setVaryingModal(!varyingModal);
+                                    setVaryingRecipient('@fat');
+                                }} />
+                            </div>
+                        }
+                        {
+                            (images6 !== null) &&
+                            <div className="carousel-item active" onClick={() => fetchItems(tvshow[1].id)}>
+                                <img src={`${image_path}${images6}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
+                                    setVaryingState('@fat');
+                                    setVaryingModal(!varyingModal);
+                                    setVaryingRecipient('@fat');
+                                }} />
+                            </div>
+                        }
+                        {
+                            (images7 !== null) &&
+                            <div className="carousel-item active" onClick={() => fetchItems(tvshow[2].id)}>
+                                <img src={`${image_path}${images7}`} className="d-block w-100" style={{ height: '20rem', width: '100%', objectFit: "contain" }} alt="" onClick={() => {
+                                    setVaryingState('@fat');
+                                    setVaryingModal(!varyingModal);
+                                    setVaryingRecipient('@fat');
+                                }} />
+                            </div>
+                        }
 
-                        <Link onClick={() => fetchItems(data[3].id)}><MDBCarouselItem
-                            className='w-100 d-block'
-                            itemId={4}
-                            src={`${image_path}${images4}`}
-                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
-                            alt='...'
-                            onClick={() => {
-                                setVaryingState('@fat');
-                                setVaryingModal(!varyingModal);
-                                setVaryingRecipient('@fat');
-                            }}
-                        >
-                        </MDBCarouselItem></Link>
-                    }
-                    {
-                        (images5 !== null) &&
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
 
-                        <Link onClick={() => fetchItems2(tvshow[0].id)}><MDBCarouselItem
-                            className='w-100 d-block'
-                            itemId={5}
-                            src={`${image_path}${images5}`}
-                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
-                            alt='...'
-                            onClick={() => setScrollableModal(!scrollableModal)}
-                        >
-
-                        </MDBCarouselItem></Link>
-                    }
-                    {
-                        (images6 !== null) &&
-
-                        <Link onClick={() => fetchItems2(tvshow[1].id)}><MDBCarouselItem
-                            className='w-100 d-block'
-                            itemId={6}
-                            src={`${image_path}${images6}`}
-                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
-                            alt='...'
-                            onClick={() => setScrollableModal(!scrollableModal)}
-                        >
-
-                        </MDBCarouselItem></Link>
-                    }
-                    {
-                        (images7 !== null) &&
-
-                        <Link onClick={() => fetchItems2(tvshow[3].id)}><MDBCarouselItem
-                            className='w-100 d-block'
-                            itemId={7}
-                            src={`${image_path}${images7}`}
-                            style={{ height: '20rem', width: '100%', objectFit: "contain" }}
-                            alt='...'
-                            onClick={() => setScrollableModal(!scrollableModal)}
-                        >
-
-                        </MDBCarouselItem></Link>
-                    }
-
-                </MDBCarousel>
 
             </div>
 

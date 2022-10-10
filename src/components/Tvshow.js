@@ -143,12 +143,12 @@ const Tvshow = () => {
 
                 <div className="container text-center">
 
-                    <Link type="button" to="/tvshows" class="btn btn-outline-light mx-1 my-1">All</Link>
-                    <Link type="button" to="/Documentary" class="btn btn-outline-light mx-1 my-1">Documentary</Link>
-                    <Link type="button" to="/TalkShow" class="btn btn-outline-light mx-1 my-1">TalkShow</Link>
-                    <Link type="button" to="/Scripted" class="btn btn-outline-light mx-1 my-1">Scripted</Link>
-                    <Link type="button" to="/Reality" class="btn btn-outline-light mx-1 my-1">Reality</Link>
-                    <Link type="button" to="/Miniseries" class="btn btn-outline-light mx-1 my-1">Miniseries</Link>
+                    <Link type="button" to="/tvshows" className="btn btn-outline-light mx-1 my-1">All</Link>
+                    <Link type="button" to="/Documentary" className="btn btn-outline-light mx-1 my-1">Documentary</Link>
+                    <Link type="button" to="/TalkShow" className="btn btn-outline-light mx-1 my-1">TalkShow</Link>
+                    <Link type="button" to="/Scripted" className="btn btn-outline-light mx-1 my-1">Scripted</Link>
+                    <Link type="button" to="/Reality" className="btn btn-outline-light mx-1 my-1">Reality</Link>
+                    <Link type="button" to="/Miniseries" className="btn btn-outline-light mx-1 my-1">Miniseries</Link>
                 </div>
                 <div className="container my-3 text-center" style={{ color: "rgb(238 238 238)" }}><h3>All Shows</h3></div>
 
