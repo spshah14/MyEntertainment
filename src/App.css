@@ -22,7 +22,7 @@
 .slide1 {
     /* width: 1000px; */
     /* margin: 10px; */
-    margin: 10px 15px 10px 0;
+    margin: 10px 10px 10px 0;
     display: inline-block;
    
 }
@@ -272,7 +272,7 @@ body{
 
 .linkcolor{
   text-decoration: none;
-  color: white;
+  color: whitesmoke;
   
 }
 
