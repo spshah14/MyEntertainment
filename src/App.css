@@ -266,7 +266,8 @@ body{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   /* background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); */
-  background: linear-gradient(to right, #b92b27, #1565c0);
+  /* background: linear-gradient(to right, #b92b27, #1565c0); */
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
   
 }
 

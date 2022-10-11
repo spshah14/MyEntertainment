@@ -312,7 +312,7 @@ const TalkShow = () => {
                                                 })}
                                             </div>
 
-                                            {(data3.length !== 0) &&
+                                            {/* {(data3.length !== 0) &&
                                                 <div className='my-3'><b>Cast</b>
                                                     <div className="horizontal">
                                                         {data3.map((element) => {
@@ -332,6 +332,30 @@ const TalkShow = () => {
                                                                     {(element.roles[0].character) && <div className="card-text text-wrap">Character<br /> {element.roles[0].character}</div>}
                                                                 </div>
                                                             </div>
+                                                        })}
+                                                    </div></div>} */}
+
+                                            {(data3.length !== 0) &&
+                                                <div className='my-3'><b>Cast</b>
+                                                    <div className="horizontal">
+                                                        {data3.map((element) => {
+                                                            return <div key={element.id} className="slide1">
+                                                                <div className="card slide1 text-center bcolor h-100 bg-image hover-zoom" style={{ width: '11rem' }}>
+                                                                    {
+
+                                                                        (element.profile_path !== null)
+                                                                            ?
+                                                                            <a href={`${image_path}${element.profile_path}`} target='-blank' rel="noopener noreferrer">
+                                                                                <img src={`${image_path}${element.profile_path}`} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} /></a>
+                                                                            : <img src={profile} alt="" className="card-img-top text-center" style={{ height: '150px', width: '11rem' }} />
+
+                                                                    }
+                                                                </div>
+
+                                                                <div className='text-center card h-100' style={{ borderTop: "1px solid white", padding: "10px 1px", width: '11rem' }}>
+                                                                    <div className="card-text text-wrap"> <b>{element.name}</b></div>
+                                                                    {(element.roles[0].character) && <div className="card-text text-wrap">Character<br /> {element.roles[0].character}</div>}
+                                                                </div></div>
                                                         })}
                                                     </div></div>}
 
