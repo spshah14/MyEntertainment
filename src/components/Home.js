@@ -409,10 +409,10 @@ const Home = () => {
                 <Link to="/movies" className='linkcolor'><h5>Movies</h5></Link>
                 {/* <Link to="/movies" className="float-end linkcolor"><b>More</b></Link> */}
                 <div>
-                    <div className="horizontal horizontal2">
+                    <div className="horizontal horizontal2 text-center">
 
                         {data.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -420,9 +420,9 @@ const Home = () => {
                                 }} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
 
                                     }
                                     <a href='#!'>
@@ -435,7 +435,7 @@ const Home = () => {
 
                         })}
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/movies" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/movies" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
 
                     </div>
@@ -448,7 +448,7 @@ const Home = () => {
                     <div className="horizontal horizontal2 my-1">
 
                         {topmovie.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -456,9 +456,9 @@ const Home = () => {
                                 }} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -469,7 +469,7 @@ const Home = () => {
 
                         })}
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/topmovies" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/topmovies" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
 
                     </div>
@@ -482,7 +482,7 @@ const Home = () => {
                     <div className="horizontal horizontal2 my-1">
 
                         {upcoming.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => {
                                     setVaryingState('@fat');
                                     setVaryingModal(!varyingModal);
@@ -490,9 +490,9 @@ const Home = () => {
                                 }} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.title}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -503,7 +503,7 @@ const Home = () => {
 
                         })}
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/upcomingmovies" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/upcomingmovies" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
 
                     </div>
@@ -516,13 +516,13 @@ const Home = () => {
                     <div className="horizontal horizontal2 my-1">
 
                         {tvshow.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -533,7 +533,7 @@ const Home = () => {
 
                         })}
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/tvshows" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/tvshows" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
 
                     </div>
@@ -547,13 +547,13 @@ const Home = () => {
                     <div className="horizontal horizontal2 my-1">
 
                         {reality.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -564,7 +564,7 @@ const Home = () => {
 
                         })}
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Reality" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Reality" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
 
                     </div>
@@ -578,13 +578,13 @@ const Home = () => {
                     <div className="horizontal horizontal2 my-1">
 
                         {documentary.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -595,7 +595,7 @@ const Home = () => {
 
                         })}
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Documentary" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Documentary" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
 
                     </div>
@@ -608,13 +608,13 @@ const Home = () => {
                     <div className="horizontal horizontal2 my-1">
 
                         {talkShow.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -625,7 +625,7 @@ const Home = () => {
 
                         })}
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/TalkShow" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/TalkShow" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
 
                     </div>
@@ -638,13 +638,13 @@ const Home = () => {
                     <div className="horizontal horizontal2 my-1">
 
                         {scripted.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -655,7 +655,7 @@ const Home = () => {
 
                         })}
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Scripted" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Scripted" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
 
                     </div>
@@ -668,13 +668,13 @@ const Home = () => {
                     <div className="horizontal horizontal2 my-1">
 
                         {miniseries.map((element) => {
-                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '10rem', width: '8rem' }}>
+                            return <div className="slide1" key={element.id} onClick={() => fetchItems2(element.id)} style={{ height: '11rem', width: '9rem' }}>
                                 <div className="bg-image hover-zoom hover-overlay hbcolor " onClick={() => setScrollableModal(!scrollableModal)} >
                                     {
                                         (element.poster_path !== null)
-                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '10rem', width: '8rem' }} />
-                                                : <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
+                                            ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                            : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '11rem', width: '9rem' }} />
+                                                : <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue' }}><b>{element.name}</b></div>)
                                     }
                                     <a href='#!'>
                                         <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
@@ -686,7 +686,7 @@ const Home = () => {
                         })}
 
                         <div>
-                            <div className='container text-center text-wrap' style={{ height: '10rem', width: '8rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Miniseries" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
+                            <div className='container text-center text-wrap' style={{ height: '11rem', width: '9rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "10px 15px 10px 0", border: "2px solid white", borderRadius: "10px", backgroundColor: 'transperent' }}><Link to="/Miniseries" className='linkcolor'><div><h6>More</h6></div><div><p>Click here</p></div></Link></div>
                         </div>
                     </div>
                 </div>

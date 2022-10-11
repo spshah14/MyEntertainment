@@ -159,21 +159,21 @@ const Scripted = () => {
                     loader={<Spinner key={2} />}
                 ><div className=" c5 text-center">
 
-                        <div className="row row-cols-2  row-cols-lg-5 g-2 g-lg-3">
+                        <div className="row row-cols-2  row-cols-lg-6 g-2 g-lg-3">
 
                             {data.map((element) => {
                                 return <div className="col my-3" key={element.id} onClick={() => fetchItems(element.id)} >
-                                    <div className="card bg-image hover-overlay mx-2 my-1 bcolor moviecard h-100" onClick={() => setScrollableModal(!scrollableModal)} >
+                                    <div className="card bg-image hover-overlay mx-2 bcolor moviecard h-100" onClick={() => setScrollableModal(!scrollableModal)} >
                                         {
                                             (element.poster_path !== null)
-                                                ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '14rem', width: 'auto', borderBottom: "1px solid white" }} />
-                                                : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '14rem', width: 'auto', borderBottom: "1px solid white" }} />
-                                                    : <div className='container text-center text-wrap h-100' style={{ height: '14rem', width: '14rem', display: "flex", justifyContent: 'center', alignItems: 'center', margin: "auto", backgroundColor: 'darkblue', borderBottom: "1px solid white" }}><b>{element.name}</b></div>)
+                                                ? <img src={`${image_path}${element.poster_path}`} alt="" style={{ height: '14rem', width: 'auto' }} />
+                                                : ((element.backdrop_path !== null) ? <img src={`${image_path}${element.backdrop_path}`} alt="" style={{ height: '14rem', width: 'auto' }} />
+                                                    : <div className='container text-center text-wrap' style={{ height: '14rem', width: 'auto', display: "flex", justifyContent: 'center', alignItems: 'center' }}><b>{element.name}</b></div>)
                                         }
                                         <a href='#!'>
                                             <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
                                         </a>
-                                        <div className="card-title my-4" id='movieTitle'> <b>{element.name}</b></div>
+                                        {/* <div className="card-title my-4" id='movieTitle'> <b>{element.name}</b></div> */}
                                     </div>
                                 </div>
                             })}
