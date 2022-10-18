@@ -17,7 +17,7 @@ import Spinner from './Spinner';
 import InfiniteScroll from 'react-infinite-scroller';
 import profile from '../Avtar.jpg';
 
-const Scripted = () => {
+const Scripted = (props) => {
 
     const [scrollableModal, setScrollableModal] = useState(false);
 
@@ -48,7 +48,7 @@ const Scripted = () => {
     let parsedresults = [];
     const fetchData = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=4&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=${props.apikey}&language=hi-IN&sort_by=popularity.desc&with_type=4&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
 
         setLoading(true);
         let results = await fetch(url)
@@ -67,7 +67,7 @@ const Scripted = () => {
 
     const fetchMoreData = async () => {
         // setPage(page + 1)
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=4&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=${props.apikey}&language=hi-IN&sort_by=popularity.desc&with_type=4&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
 
         // setLoading(true);
         let results = await fetch(url)
@@ -80,7 +80,7 @@ const Scripted = () => {
     const fetchItems = async (id) => {
 
 
-        const url = `https://api.themoviedb.org/3/tv/${id}/videos?api_key=c85a7220743f2e910ce5418be14ce8b8&include_video=true&append_to_response=videos,images`
+        const url = `https://api.themoviedb.org/3/tv/${id}/videos?api_key=${props.apikey}&include_video=true&append_to_response=videos,images`
         setLoading2(true)
         let results = await fetch(url)
         let parsedresults2 = await results.json()
@@ -89,7 +89,7 @@ const Scripted = () => {
         // eslint-disable-next-lin
 
 
-        const url2 = `https://api.themoviedb.org/3/tv/${id}/aggregate_credits?api_key=c85a7220743f2e910ce5418be14ce8b8&append_to_response=videos,images`
+        const url2 = `https://api.themoviedb.org/3/tv/${id}/aggregate_credits?api_key=${props.apikey}&append_to_response=videos,images`
         setLoading2(true)
         let cast = await fetch(url2)
         let parsedresults3 = await cast.json()
@@ -97,7 +97,7 @@ const Scripted = () => {
         setLoading2(false)
         // console.log(parsedresults3)
 
-        const url3 = `https://api.themoviedb.org/3/tv/${id}/images?api_key=c85a7220743f2e910ce5418be14ce8b8&append_to_response=videos,images`
+        const url3 = `https://api.themoviedb.org/3/tv/${id}/images?api_key=${props.apikey}&append_to_response=videos,images`
         setLoading2(true)
         let backdrops = await fetch(url3)
         let parsedresults4 = await backdrops.json()
@@ -105,7 +105,7 @@ const Scripted = () => {
         setLoading2(false)
         // console.log(parsedresults4)
 
-        const url4 = `https://api.themoviedb.org/3/tv/${id}?api_key=c85a7220743f2e910ce5418be14ce8b8&include_video=true&append_to_response=videos,images`
+        const url4 = `https://api.themoviedb.org/3/tv/${id}?api_key=${props.apikey}&include_video=true&append_to_response=videos,images`
         setLoading2(true)
         let results5 = await fetch(url4)
         let parsedresults5 = await results5.json()
@@ -124,7 +124,7 @@ const Scripted = () => {
         setFirst_air_date(parsedresults5.first_air_date)
         setRating(parsedresults5.vote_average)
 
-        const url5 = `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=c85a7220743f2e910ce5418be14ce8b8`
+        const url5 = `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=${props.apikey}`
         setLoading2(true)
         let results6 = await fetch(url5)
         let parsedresults6 = await results6.json()

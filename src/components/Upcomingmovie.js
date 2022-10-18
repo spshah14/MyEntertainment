@@ -14,7 +14,7 @@ import Spinner from './Spinner';
 import InfiniteScroll from 'react-infinite-scroller';
 import profile from '../Avtar.jpg';
 
-const Upcomingmovie = () => {
+const Upcomingmovie = (props) => {
 
     const [scrollableModal, setScrollableModal] = useState(false);
 
@@ -40,8 +40,8 @@ const Upcomingmovie = () => {
     let parsedresults = [];
     const fetchData = async () => {
 
-        // const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
-        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&page=1&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
+        // const url = `https://api.themoviedb.org/3/discover/movie?api_key=${props.apikey}&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
+        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${props.apikey}&language=hi-IN&page=1&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
 
         setLoading(true);
         let results = await fetch(url)
@@ -65,7 +65,7 @@ const Upcomingmovie = () => {
 
     const fetchMoreData = async () => {
         // setPage(page + 1)
-        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&page=1&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
+        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${props.apikey}&language=hi-IN&page=1&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page + 1}`
 
         // setLoading(true);
         let results = await fetch(url)
@@ -79,7 +79,7 @@ const Upcomingmovie = () => {
     const fetchItems = async (id) => {
 
 
-        const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=c85a7220743f2e910ce5418be14ce8b8&include_video=true&append_to_response=videos,images`
+        const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${props.apikey}&include_video=true&append_to_response=videos,images`
         setLoading2(true)
         let results = await fetch(url)
         let parsedresults2 = await results.json()
@@ -88,7 +88,7 @@ const Upcomingmovie = () => {
         // eslint-disable-next-lin
 
 
-        const url2 = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=c85a7220743f2e910ce5418be14ce8b8&append_to_response=videos,images`
+        const url2 = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${props.apikey}&append_to_response=videos,images`
         setLoading2(true)
         let cast = await fetch(url2)
         let parsedresults3 = await cast.json()
@@ -96,7 +96,7 @@ const Upcomingmovie = () => {
         setLoading2(false)
         // console.log(parsedresults3)
 
-        const url3 = `https://api.themoviedb.org/3/movie/${id}/images?api_key=c85a7220743f2e910ce5418be14ce8b8&append_to_response=videos,images`
+        const url3 = `https://api.themoviedb.org/3/movie/${id}/images?api_key=${props.apikey}&append_to_response=videos,images`
         setLoading2(true)
         let backdrops = await fetch(url3)
         let parsedresults4 = await backdrops.json()
@@ -104,7 +104,7 @@ const Upcomingmovie = () => {
         setLoading2(false)
         // console.log(parsedresults4)
 
-        const url4 = `https://api.themoviedb.org/3/movie/${id}?api_key=c85a7220743f2e910ce5418be14ce8b8&include_video=true&append_to_response=videos,images`
+        const url4 = `https://api.themoviedb.org/3/movie/${id}?api_key=${props.apikey}&include_video=true&append_to_response=videos,images`
         setLoading2(true)
         let results5 = await fetch(url4)
         let parsedresults5 = await results5.json()
@@ -120,7 +120,7 @@ const Upcomingmovie = () => {
         setRelease_date(parsedresults5.release_date)
 
 
-        const url5 = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=c85a7220743f2e910ce5418be14ce8b8`
+        const url5 = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=${props.apikey}`
         setLoading2(true)
         let results6 = await fetch(url5)
         let parsedresults6 = await results6.json()

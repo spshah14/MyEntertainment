@@ -22,6 +22,7 @@ import Scripted from './components/Scripted';
 import TalkShow from './components/TalkShow';
 
 function App() {
+  const apikey = process.env.REACT_APP_TMDB_API
   return (
     <>
       <div className="App">
@@ -29,20 +30,20 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/movies" element={<Movies />} />
-            <Route path="/topmovies" element={<Topmovies />} />
-            <Route path="/upcomingmovies" element={<Upcomingmovie />} />
+            <Route path="/" element={<Home apikey={apikey} />} />
+            <Route path="/home" element={<Home apikey={apikey} />} />
+            <Route path="/movies" element={<Movies apikey={apikey} />} />
+            <Route path="/topmovies" element={<Topmovies apikey={apikey} />} />
+            <Route path="/upcomingmovies" element={<Upcomingmovie apikey={apikey} />} />
             {/* <Route path="/moviesmore" element={<Moviesmore />} /> */}
-            <Route path="/tvshows" element={<Tvshow />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/searchtv" element={<SearchTV />} />
-            <Route path="/Reality" element={<Reality />} />
-            <Route path="/Documentary" element={<Documentary />} />
-            <Route path="/Miniseries" element={<Miniseries />} />
-            <Route path="/Scripted" element={<Scripted />} />
-            <Route path="/TalkShow" element={<TalkShow />} />
+            <Route path="/tvshows" element={<Tvshow apikey={apikey} />} />
+            <Route path="/search" element={<Search apikey={apikey} />} />
+            <Route path="/searchtv" element={<SearchTV apikey={apikey} />} />
+            <Route path="/Reality" element={<Reality apikey={apikey} />} />
+            <Route path="/Documentary" element={<Documentary apikey={apikey} />} />
+            <Route path="/Miniseries" element={<Miniseries apikey={apikey} />} />
+            <Route path="/Scripted" element={<Scripted apikey={apikey} />} />
+            <Route path="/TalkShow" element={<TalkShow apikey={apikey} />} />
 
           </Routes>
         </Router>

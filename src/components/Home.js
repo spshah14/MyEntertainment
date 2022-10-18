@@ -15,7 +15,7 @@ import {
 import Spinner from './Spinner';
 import profile from '../Avtar.jpg';
 
-const Home = () => {
+const Home = (props) => {
 
 
     // eslint-disable-next-line
@@ -82,7 +82,7 @@ const Home = () => {
     let parsedresults = [];
     const fetchData = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        const url = `https://api.themoviedb.org/3/discover/movie?api_key=${props.apikey}&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -99,8 +99,8 @@ const Home = () => {
     }
     const fetchData2 = async () => {
 
-        // const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
-        const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        // const url = `https://api.themoviedb.org/3/discover/movie?api_key=${props.apikey}&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
+        const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${props.apikey}&language=hi-IN&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -113,8 +113,8 @@ const Home = () => {
 
     const fetchData3 = async () => {
 
-        // const url = `https://api.themoviedb.org/3/discover/movie?api_key=c85a7220743f2e910ce5418be14ce8b8&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
-        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&page=1&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        // const url = `https://api.themoviedb.org/3/discover/movie?api_key=${props.apikey}&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=${page}`
+        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${props.apikey}&language=hi-IN&page=1&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -127,7 +127,7 @@ const Home = () => {
 
     const fetchData4 = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=${props.apikey}&language=hi-IN&sort_by=popularity.desc&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -141,7 +141,7 @@ const Home = () => {
 
     const fetchData5 = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=3&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=${props.apikey}&language=hi-IN&sort_by=popularity.desc&with_type=3&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -152,7 +152,7 @@ const Home = () => {
 
     const fetchData6 = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=0&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=${props.apikey}&language=hi-IN&sort_by=popularity.desc&with_type=0&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -163,7 +163,7 @@ const Home = () => {
 
     const fetchData7 = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=5&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=${props.apikey}&language=hi-IN&sort_by=popularity.desc&with_type=5&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -174,7 +174,7 @@ const Home = () => {
 
     const fetchData8 = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=4&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=${props.apikey}&language=hi-IN&sort_by=popularity.desc&with_type=4&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -185,7 +185,7 @@ const Home = () => {
 
     const fetchData9 = async () => {
 
-        const url = `https://api.themoviedb.org/3/discover/tv?api_key=c85a7220743f2e910ce5418be14ce8b8&language=hi-IN&sort_by=popularity.desc&with_type=2&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
+        const url = `https://api.themoviedb.org/3/discover/tv?api_key=${props.apikey}&language=hi-IN&sort_by=popularity.desc&with_type=2&page=5&with_origin_country=IN&include_video=true&append_to_response=videos,images&page=1`
 
         setLoading(true);
         let results = await fetch(url)
@@ -211,7 +211,7 @@ const Home = () => {
     const fetchItems = async (id) => {
 
 
-        const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=c85a7220743f2e910ce5418be14ce8b8&include_video=true&append_to_response=videos,images`
+        const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${props.apikey}&include_video=true&append_to_response=videos,images`
         setLoading2(true)
         let results = await fetch(url)
         let parsedresults2 = await results.json()
@@ -220,7 +220,7 @@ const Home = () => {
         // eslint-disable-next-lin
 
 
-        const url2 = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=c85a7220743f2e910ce5418be14ce8b8&append_to_response=videos,images`
+        const url2 = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${props.apikey}&append_to_response=videos,images`
         setLoading2(true)
         let cast = await fetch(url2)
         let parsedresults3 = await cast.json()
@@ -228,7 +228,7 @@ const Home = () => {
         setLoading2(false)
         // console.log(parsedresults3)
 
-        const url3 = `https://api.themoviedb.org/3/movie/${id}/images?api_key=c85a7220743f2e910ce5418be14ce8b8&append_to_response=videos,images`
+        const url3 = `https://api.themoviedb.org/3/movie/${id}/images?api_key=${props.apikey}&append_to_response=videos,images`
         setLoading2(true)
         let backdrops = await fetch(url3)
         let parsedresults4 = await backdrops.json()
@@ -236,7 +236,7 @@ const Home = () => {
         setLoading2(false)
         // console.log(parsedresults4)
 
-        const url4 = `https://api.themoviedb.org/3/movie/${id}?api_key=c85a7220743f2e910ce5418be14ce8b8&include_video=true&append_to_response=videos,images`
+        const url4 = `https://api.themoviedb.org/3/movie/${id}?api_key=${props.apikey}&include_video=true&append_to_response=videos,images`
         setLoading2(true)
         let results5 = await fetch(url4)
         let parsedresults5 = await results5.json()
@@ -252,7 +252,7 @@ const Home = () => {
         setRelease_date(parsedresults5.release_date)
         setRating(parsedresults5.vote_average)
 
-        const url5 = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=c85a7220743f2e910ce5418be14ce8b8`
+        const url5 = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=${props.apikey}`
         setLoading2(true)
         let results6 = await fetch(url5)
         let parsedresults6 = await results6.json()
@@ -266,7 +266,7 @@ const Home = () => {
     const fetchItems2 = async (id) => {
 
 
-        const url = `https://api.themoviedb.org/3/tv/${id}/videos?api_key=c85a7220743f2e910ce5418be14ce8b8&include_video=true&append_to_response=videos,images`
+        const url = `https://api.themoviedb.org/3/tv/${id}/videos?api_key=${props.apikey}&include_video=true&append_to_response=videos,images`
         setLoading2(true)
         let results = await fetch(url)
         let parsedresults2 = await results.json()
@@ -275,7 +275,7 @@ const Home = () => {
         // eslint-disable-next-lin
 
 
-        const url2 = `https://api.themoviedb.org/3/tv/${id}/aggregate_credits?api_key=c85a7220743f2e910ce5418be14ce8b8&append_to_response=videos,images`
+        const url2 = `https://api.themoviedb.org/3/tv/${id}/aggregate_credits?api_key=${props.apikey}&append_to_response=videos,images`
         setLoading2(true)
         let cast = await fetch(url2)
         let parsedresults3 = await cast.json()
@@ -283,7 +283,7 @@ const Home = () => {
         setLoading2(false)
         // console.log(parsedresults3)
 
-        const url3 = `https://api.themoviedb.org/3/tv/${id}/images?api_key=c85a7220743f2e910ce5418be14ce8b8&append_to_response=videos,images`
+        const url3 = `https://api.themoviedb.org/3/tv/${id}/images?api_key=${props.apikey}&append_to_response=videos,images`
         setLoading2(true)
         let backdrops = await fetch(url3)
         let parsedresults4 = await backdrops.json()
@@ -291,7 +291,7 @@ const Home = () => {
         setLoading2(false)
         // console.log(parsedresults4)
 
-        const url4 = `https://api.themoviedb.org/3/tv/${id}?api_key=c85a7220743f2e910ce5418be14ce8b8&include_video=true&append_to_response=videos,images`
+        const url4 = `https://api.themoviedb.org/3/tv/${id}?api_key=${props.apikey}&include_video=true&append_to_response=videos,images`
         setLoading2(true)
         let results5 = await fetch(url4)
         let parsedresults5 = await results5.json()
@@ -310,7 +310,7 @@ const Home = () => {
         setFirst_air_date(parsedresults5.first_air_date)
         setRating(parsedresults5.vote_average)
 
-        const url5 = `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=c85a7220743f2e910ce5418be14ce8b8`
+        const url5 = `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=${props.apikey}`
         setLoading2(true)
         let results6 = await fetch(url5)
         let parsedresults6 = await results6.json()
